@@ -22,7 +22,7 @@ public struct Loan: Identifiable {
         self.name = name
         self.interestRate = interestRate
         self.currentAmount = Monetize.from(minorUnits: currentAmountCents, currencyCode: currencyCode)!
-        self.minimumPayment = Monetize.from(minorUnits: currentAmountCents, currencyCode: currencyCode)!
+        self.minimumPayment = Monetize.from(minorUnits: minimumPaymentCents, currencyCode: currencyCode)!
         self.createdAt = createdAt
     }
 }

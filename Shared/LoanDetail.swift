@@ -11,24 +11,22 @@ import Artic
 import Money
 
 struct LoanDetail: View {
-    var id: String
     @FetchRequest var loans: FetchedResults<Loan>
-    
+
     init(id: String) {
-        self.id = id
         _loans = FetchRequest(fetchRequest: Loan.findByID(id: id))
     }
     
     var body: some View {
         let loan = PresentedLoan.from(loan: loans.first)
-        
+
         VStack {
             Text(loan.name)
-            Text("Minimum Amount ($)")
+            Text("Minimum Payment")
             Text(loan.minimumAmount)
-            Text("Current Amount ($)")
+            Text("Current Amount")
             Text(loan.currentAmount)
-            Text("Interest Rate %")
+            Text("Interest Rate")
             Text(loan.interestRate)
         }
     }
@@ -36,7 +34,8 @@ struct LoanDetail: View {
 
 struct LoanDetail_Previews: PreviewProvider {
     static var previews: some View {
-        LoanDetail(id: "")
+        LoanDetail(id: PersistenceController.sampleID)
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
 

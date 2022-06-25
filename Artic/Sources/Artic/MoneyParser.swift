@@ -1,6 +1,6 @@
 //
 //  MoneyParser.swift
-//  Artic
+//
 //
 //  Created by jocmp on 6/24/22.
 //
