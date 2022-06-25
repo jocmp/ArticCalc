@@ -2,7 +2,7 @@
 //  Tests_macOSLaunchTests.swift
 //  Tests macOS
 //
-//  Created by Josiah Campbell on 6/12/22.
+//  Created by jocmp on 6/12/22.
 //
 
 import XCTest

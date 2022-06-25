@@ -2,7 +2,7 @@
 //  LoanOverview.swift
 //  Artic
 //
-//  Created by Josiah Campbell on 6/19/22.
+//  Created by jocmp on 6/19/22.
 //
 
 import SwiftUI
