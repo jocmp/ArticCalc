@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A1A8744285FCECC00EA7BF2 /* Artic in Frameworks */ = {isa = PBXBuildFile; productRef = 8A1A8743285FCECC00EA7BF2 /* Artic */; };
+		8A1A8746285FCEF100EA7BF2 /* ArticLoan+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8745285FCEF100EA7BF2 /* ArticLoan+CoreData.swift */; };
+		8A1A8747285FCEF100EA7BF2 /* ArticLoan+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8745285FCEF100EA7BF2 /* ArticLoan+CoreData.swift */; };
+		8A1A8749285FCF0D00EA7BF2 /* Artic in Frameworks */ = {isa = PBXBuildFile; productRef = 8A1A8748285FCF0D00EA7BF2 /* Artic */; };
+		8A660815286231DA000BF0D0 /* PresentedLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A660814286231DA000BF0D0 /* PresentedLoan.swift */; };
+		8A660816286231DA000BF0D0 /* PresentedLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A660814286231DA000BF0D0 /* PresentedLoan.swift */; };
+		8A66081828625DDD000BF0D0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A66081728625DDD000BF0D0 /* Localizable.strings */; };
+		8A66081928625DDD000BF0D0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A66081728625DDD000BF0D0 /* Localizable.strings */; };
+		8A66081B28625F6D000BF0D0 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A66081A28625F6D000BF0D0 /* Errors.swift */; };
+		8A66081C28625F6D000BF0D0 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A66081A28625F6D000BF0D0 /* Errors.swift */; };
 		8A79AB8328569F830073086C /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB8228569F830073086C /* Tests_iOS.swift */; };
 		8A79AB8528569F830073086C /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB8428569F830073086C /* Tests_iOSLaunchTests.swift */; };
 		8A79AB8F28569F830073086C /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB8E28569F830073086C /* Tests_macOS.swift */; };
@@ -15,22 +25,26 @@
 		8A79AB9328569F830073086C /* Artic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6728569F820073086C /* Artic.xcdatamodeld */; };
 		8A79AB9428569F830073086C /* ArticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6928569F820073086C /* ArticApp.swift */; };
 		8A79AB9528569F830073086C /* ArticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6928569F820073086C /* ArticApp.swift */; };
-		8A79AB9628569F830073086C /* LoanList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6A28569F820073086C /* LoanList.swift */; };
-		8A79AB9728569F830073086C /* LoanList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6A28569F820073086C /* LoanList.swift */; };
-		8A79AB9828569F830073086C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6B28569F820073086C /* Persistence.swift */; };
-		8A79AB9928569F830073086C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6B28569F820073086C /* Persistence.swift */; };
 		8A79AB9A28569F830073086C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A79AB6C28569F830073086C /* Assets.xcassets */; };
 		8A79AB9B28569F830073086C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A79AB6C28569F830073086C /* Assets.xcassets */; };
-		8AAEC4A2285FA9FA00885691 /* LoanOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4A1285FA9FA00885691 /* LoanOverview.swift */; };
-		8AAEC4A3285FA9FA00885691 /* LoanOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4A1285FA9FA00885691 /* LoanOverview.swift */; };
-		8AAEC4A8285FACD200885691 /* AddLoanModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4A7285FACD200885691 /* AddLoanModal.swift */; };
-		8AAEC4A9285FACD200885691 /* AddLoanModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4A7285FACD200885691 /* AddLoanModal.swift */; };
-		8AAEC4AB285FAE1700885691 /* AddLoanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4AA285FAE1700885691 /* AddLoanForm.swift */; };
-		8AAEC4AC285FAE1700885691 /* AddLoanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4AA285FAE1700885691 /* AddLoanForm.swift */; };
-		8AAEC4BB285FB6EE00885691 /* ArticCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8AAEC4BA285FB6EE00885691 /* ArticCore */; };
-		8AAEC4BD285FB6F500885691 /* ArticCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8AAEC4BC285FB6F500885691 /* ArticCore */; };
-		8AAEC4C0285FB80100885691 /* LoanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4BF285FB80100885691 /* LoanForm.swift */; };
-		8AAEC4C1285FB80100885691 /* LoanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4BF285FB80100885691 /* LoanForm.swift */; };
+		8AAEC4DD285FBFBB00885691 /* LoanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D4285FBFBB00885691 /* LoanForm.swift */; };
+		8AAEC4DE285FBFBB00885691 /* LoanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D4285FBFBB00885691 /* LoanForm.swift */; };
+		8AAEC4DF285FBFBB00885691 /* AddLoanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D5285FBFBB00885691 /* AddLoanForm.swift */; };
+		8AAEC4E0285FBFBB00885691 /* AddLoanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D5285FBFBB00885691 /* AddLoanForm.swift */; };
+		8AAEC4E1285FBFBB00885691 /* ArticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D6285FBFBB00885691 /* ArticApp.swift */; };
+		8AAEC4E2285FBFBB00885691 /* ArticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D6285FBFBB00885691 /* ArticApp.swift */; };
+		8AAEC4E3285FBFBB00885691 /* LoanList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D7285FBFBB00885691 /* LoanList.swift */; };
+		8AAEC4E4285FBFBB00885691 /* LoanList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D7285FBFBB00885691 /* LoanList.swift */; };
+		8AAEC4E5285FBFBB00885691 /* LoanOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D8285FBFBB00885691 /* LoanOverview.swift */; };
+		8AAEC4E6285FBFBB00885691 /* LoanOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D8285FBFBB00885691 /* LoanOverview.swift */; };
+		8AAEC4E7285FBFBB00885691 /* AddLoanModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D9285FBFBB00885691 /* AddLoanModal.swift */; };
+		8AAEC4E8285FBFBB00885691 /* AddLoanModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D9285FBFBB00885691 /* AddLoanModal.swift */; };
+		8AAEC4EB285FBFBB00885691 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4DC285FBFBB00885691 /* Persistence.swift */; };
+		8AAEC4EC285FBFBB00885691 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4DC285FBFBB00885691 /* Persistence.swift */; };
+		8AAEC4EE285FBFDD00885691 /* NumberFormatter+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4ED285FBFDD00885691 /* NumberFormatter+Currency.swift */; };
+		8AAEC4EF285FBFDD00885691 /* NumberFormatter+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4ED285FBFDD00885691 /* NumberFormatter+Currency.swift */; };
+		8AAEC4F1285FC0AF00885691 /* LoanDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4F0285FC0AF00885691 /* LoanDetail.swift */; };
+		8AAEC4F2285FC0AF00885691 /* LoanDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4F0285FC0AF00885691 /* LoanDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,13 +65,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A1A8742285FCEBE00EA7BF2 /* Artic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Artic; sourceTree = "<group>"; };
+		8A1A8745285FCEF100EA7BF2 /* ArticLoan+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticLoan+CoreData.swift"; sourceTree = "<group>"; };
+		8A660814286231DA000BF0D0 /* PresentedLoan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentedLoan.swift; sourceTree = "<group>"; };
+		8A66081728625DDD000BF0D0 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		8A66081A28625F6D000BF0D0 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		8A79AB6828569F820073086C /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		8A79AB6928569F820073086C /* ArticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticApp.swift; sourceTree = "<group>"; };
-		8A79AB6A28569F820073086C /* LoanList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanList.swift; sourceTree = "<group>"; };
-		8A79AB6B28569F820073086C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8A79AB6C28569F830073086C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8A79AB7128569F830073086C /* Artic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artic.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A79AB7728569F830073086C /* Artic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A79AB7128569F830073086C /* ArticApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArticApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A79AB7728569F830073086C /* ArticApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArticApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A79AB7928569F830073086C /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		8A79AB7E28569F830073086C /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A79AB8228569F830073086C /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
@@ -65,11 +82,15 @@
 		8A79AB8A28569F830073086C /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A79AB8E28569F830073086C /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		8A79AB9028569F830073086C /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
-		8AAEC4A1285FA9FA00885691 /* LoanOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanOverview.swift; sourceTree = "<group>"; };
-		8AAEC4A7285FACD200885691 /* AddLoanModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanModal.swift; sourceTree = "<group>"; };
-		8AAEC4AA285FAE1700885691 /* AddLoanForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanForm.swift; sourceTree = "<group>"; };
-		8AAEC4B8285FB63500885691 /* ArticCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ArticCore; sourceTree = "<group>"; };
-		8AAEC4BF285FB80100885691 /* LoanForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanForm.swift; sourceTree = "<group>"; };
+		8AAEC4D4285FBFBB00885691 /* LoanForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanForm.swift; sourceTree = "<group>"; };
+		8AAEC4D5285FBFBB00885691 /* AddLoanForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLoanForm.swift; sourceTree = "<group>"; };
+		8AAEC4D6285FBFBB00885691 /* ArticApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticApp.swift; sourceTree = "<group>"; };
+		8AAEC4D7285FBFBB00885691 /* LoanList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanList.swift; sourceTree = "<group>"; };
+		8AAEC4D8285FBFBB00885691 /* LoanOverview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanOverview.swift; sourceTree = "<group>"; };
+		8AAEC4D9285FBFBB00885691 /* AddLoanModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLoanModal.swift; sourceTree = "<group>"; };
+		8AAEC4DC285FBFBB00885691 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		8AAEC4ED285FBFDD00885691 /* NumberFormatter+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Currency.swift"; sourceTree = "<group>"; };
+		8AAEC4F0285FC0AF00885691 /* LoanDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AAEC4BB285FB6EE00885691 /* ArticCore in Frameworks */,
+				8A1A8744285FCECC00EA7BF2 /* Artic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AAEC4BD285FB6F500885691 /* ArticCore in Frameworks */,
+				8A1A8749285FCF0D00EA7BF2 /* Artic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,10 +127,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A1A8741285FCEBE00EA7BF2 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				8A1A8742285FCEBE00EA7BF2 /* Artic */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		8A79AB6128569F820073086C = {
 			isa = PBXGroup;
 			children = (
-				8AAEC4B4285FB57600885691 /* Packages */,
+				8A1A8741285FCEBE00EA7BF2 /* Packages */,
 				8A79AB6628569F820073086C /* Shared */,
 				8A79AB7828569F830073086C /* macOS */,
 				8A79AB8128569F830073086C /* Tests iOS */,
@@ -122,11 +151,22 @@
 		8A79AB6628569F820073086C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8AAEC4D5285FBFBB00885691 /* AddLoanForm.swift */,
+				8AAEC4D9285FBFBB00885691 /* AddLoanModal.swift */,
 				8A79AB6928569F820073086C /* ArticApp.swift */,
-				8AAEC4AD285FB2D400885691 /* Views */,
+				8AAEC4D4285FBFBB00885691 /* LoanForm.swift */,
+				8AAEC4D7285FBFBB00885691 /* LoanList.swift */,
+				8AAEC4D8285FBFBB00885691 /* LoanOverview.swift */,
+				8AAEC4DC285FBFBB00885691 /* Persistence.swift */,
 				8A79AB6C28569F830073086C /* Assets.xcassets */,
 				8A79AB6728569F820073086C /* Artic.xcdatamodeld */,
-				8AAEC4BF285FB80100885691 /* LoanForm.swift */,
+				8AAEC4D6285FBFBB00885691 /* ArticApp.swift */,
+				8AAEC4ED285FBFDD00885691 /* NumberFormatter+Currency.swift */,
+				8AAEC4F0285FC0AF00885691 /* LoanDetail.swift */,
+				8A1A8745285FCEF100EA7BF2 /* ArticLoan+CoreData.swift */,
+				8A660814286231DA000BF0D0 /* PresentedLoan.swift */,
+				8A66081728625DDD000BF0D0 /* Localizable.strings */,
+				8A66081A28625F6D000BF0D0 /* Errors.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -134,8 +174,8 @@
 		8A79AB7228569F830073086C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8A79AB7128569F830073086C /* Artic.app */,
-				8A79AB7728569F830073086C /* Artic.app */,
+				8A79AB7128569F830073086C /* ArticApp.app */,
+				8A79AB7728569F830073086C /* ArticApp.app */,
 				8A79AB7E28569F830073086C /* Tests iOS.xctest */,
 				8A79AB8A28569F830073086C /* Tests macOS.xctest */,
 			);
@@ -168,26 +208,6 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
-		8AAEC4AD285FB2D400885691 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8A79AB6A28569F820073086C /* LoanList.swift */,
-				8A79AB6B28569F820073086C /* Persistence.swift */,
-				8AAEC4A1285FA9FA00885691 /* LoanOverview.swift */,
-				8AAEC4A7285FACD200885691 /* AddLoanModal.swift */,
-				8AAEC4AA285FAE1700885691 /* AddLoanForm.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		8AAEC4B4285FB57600885691 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				8AAEC4B8285FB63500885691 /* ArticCore */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		8AAEC4B9285FB6EE00885691 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,9 +218,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8A79AB7028569F830073086C /* Artic (iOS) */ = {
+		8A79AB7028569F830073086C /* ArticApp (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A79AB9E28569F830073086C /* Build configuration list for PBXNativeTarget "Artic (iOS)" */;
+			buildConfigurationList = 8A79AB9E28569F830073086C /* Build configuration list for PBXNativeTarget "ArticApp (iOS)" */;
 			buildPhases = (
 				8A79AB6D28569F830073086C /* Sources */,
 				8A79AB6E28569F830073086C /* Frameworks */,
@@ -210,17 +230,17 @@
 			);
 			dependencies = (
 			);
-			name = "Artic (iOS)";
+			name = "ArticApp (iOS)";
 			packageProductDependencies = (
-				8AAEC4BA285FB6EE00885691 /* ArticCore */,
+				8A1A8743285FCECC00EA7BF2 /* Artic */,
 			);
 			productName = "Artic (iOS)";
-			productReference = 8A79AB7128569F830073086C /* Artic.app */;
+			productReference = 8A79AB7128569F830073086C /* ArticApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8A79AB7628569F830073086C /* Artic (macOS) */ = {
+		8A79AB7628569F830073086C /* ArticApp (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A79ABA128569F830073086C /* Build configuration list for PBXNativeTarget "Artic (macOS)" */;
+			buildConfigurationList = 8A79ABA128569F830073086C /* Build configuration list for PBXNativeTarget "ArticApp (macOS)" */;
 			buildPhases = (
 				8A79AB7328569F830073086C /* Sources */,
 				8A79AB7428569F830073086C /* Frameworks */,
@@ -230,12 +250,12 @@
 			);
 			dependencies = (
 			);
-			name = "Artic (macOS)";
+			name = "ArticApp (macOS)";
 			packageProductDependencies = (
-				8AAEC4BC285FB6F500885691 /* ArticCore */,
+				8A1A8748285FCF0D00EA7BF2 /* Artic */,
 			);
 			productName = "Artic (macOS)";
-			productReference = 8A79AB7728569F830073086C /* Artic.app */;
+			productReference = 8A79AB7728569F830073086C /* ArticApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8A79AB7D28569F830073086C /* Tests iOS */ = {
@@ -300,7 +320,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8A79AB6528569F820073086C /* Build configuration list for PBXProject "Artic" */;
+			buildConfigurationList = 8A79AB6528569F820073086C /* Build configuration list for PBXProject "ArticApp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -313,8 +333,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8A79AB7028569F830073086C /* Artic (iOS) */,
-				8A79AB7628569F830073086C /* Artic (macOS) */,
+				8A79AB7028569F830073086C /* ArticApp (iOS) */,
+				8A79AB7628569F830073086C /* ArticApp (macOS) */,
 				8A79AB7D28569F830073086C /* Tests iOS */,
 				8A79AB8928569F830073086C /* Tests macOS */,
 			);
@@ -327,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A79AB9A28569F830073086C /* Assets.xcassets in Resources */,
+				8A66081828625DDD000BF0D0 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A79AB9B28569F830073086C /* Assets.xcassets in Resources */,
+				8A66081928625DDD000BF0D0 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,14 +381,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A660815286231DA000BF0D0 /* PresentedLoan.swift in Sources */,
 				8A79AB9228569F830073086C /* Artic.xcdatamodeld in Sources */,
-				8AAEC4AB285FAE1700885691 /* AddLoanForm.swift in Sources */,
-				8A79AB9828569F830073086C /* Persistence.swift in Sources */,
+				8AAEC4DD285FBFBB00885691 /* LoanForm.swift in Sources */,
 				8A79AB9428569F830073086C /* ArticApp.swift in Sources */,
-				8AAEC4A8285FACD200885691 /* AddLoanModal.swift in Sources */,
-				8A79AB9628569F830073086C /* LoanList.swift in Sources */,
-				8AAEC4A2285FA9FA00885691 /* LoanOverview.swift in Sources */,
-				8AAEC4C0285FB80100885691 /* LoanForm.swift in Sources */,
+				8AAEC4EE285FBFDD00885691 /* NumberFormatter+Currency.swift in Sources */,
+				8AAEC4E1285FBFBB00885691 /* ArticApp.swift in Sources */,
+				8A66081B28625F6D000BF0D0 /* Errors.swift in Sources */,
+				8AAEC4DF285FBFBB00885691 /* AddLoanForm.swift in Sources */,
+				8AAEC4E7285FBFBB00885691 /* AddLoanModal.swift in Sources */,
+				8AAEC4F1285FC0AF00885691 /* LoanDetail.swift in Sources */,
+				8A1A8746285FCEF100EA7BF2 /* ArticLoan+CoreData.swift in Sources */,
+				8AAEC4E5285FBFBB00885691 /* LoanOverview.swift in Sources */,
+				8AAEC4E3285FBFBB00885691 /* LoanList.swift in Sources */,
+				8AAEC4EB285FBFBB00885691 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,14 +402,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A660816286231DA000BF0D0 /* PresentedLoan.swift in Sources */,
 				8A79AB9328569F830073086C /* Artic.xcdatamodeld in Sources */,
-				8AAEC4AC285FAE1700885691 /* AddLoanForm.swift in Sources */,
-				8A79AB9928569F830073086C /* Persistence.swift in Sources */,
+				8AAEC4DE285FBFBB00885691 /* LoanForm.swift in Sources */,
 				8A79AB9528569F830073086C /* ArticApp.swift in Sources */,
-				8AAEC4A9285FACD200885691 /* AddLoanModal.swift in Sources */,
-				8A79AB9728569F830073086C /* LoanList.swift in Sources */,
-				8AAEC4A3285FA9FA00885691 /* LoanOverview.swift in Sources */,
-				8AAEC4C1285FB80100885691 /* LoanForm.swift in Sources */,
+				8AAEC4EF285FBFDD00885691 /* NumberFormatter+Currency.swift in Sources */,
+				8AAEC4E2285FBFBB00885691 /* ArticApp.swift in Sources */,
+				8A66081C28625F6D000BF0D0 /* Errors.swift in Sources */,
+				8AAEC4E0285FBFBB00885691 /* AddLoanForm.swift in Sources */,
+				8AAEC4E8285FBFBB00885691 /* AddLoanModal.swift in Sources */,
+				8AAEC4F2285FC0AF00885691 /* LoanDetail.swift in Sources */,
+				8A1A8747285FCEF100EA7BF2 /* ArticLoan+CoreData.swift in Sources */,
+				8AAEC4E6285FBFBB00885691 /* LoanOverview.swift in Sources */,
+				8AAEC4E4285FBFBB00885691 /* LoanList.swift in Sources */,
+				8AAEC4EC285FBFBB00885691 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,12 +442,12 @@
 /* Begin PBXTargetDependency section */
 		8A79AB8028569F830073086C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8A79AB7028569F830073086C /* Artic (iOS) */;
+			target = 8A79AB7028569F830073086C /* ArticApp (iOS) */;
 			targetProxy = 8A79AB7F28569F830073086C /* PBXContainerItemProxy */;
 		};
 		8A79AB8C28569F830073086C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8A79AB7628569F830073086C /* Artic (macOS) */;
+			target = 8A79AB7628569F830073086C /* ArticApp (macOS) */;
 			targetProxy = 8A79AB8B28569F830073086C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -550,7 +584,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jocmp.Artic;
-				PRODUCT_NAME = Artic;
+				PRODUCT_NAME = ArticApp;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -580,7 +614,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jocmp.Artic;
-				PRODUCT_NAME = Artic;
+				PRODUCT_NAME = ArticApp;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -610,7 +644,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jocmp.Artic;
-				PRODUCT_NAME = Artic;
+				PRODUCT_NAME = ArticApp;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -638,7 +672,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jocmp.Artic;
-				PRODUCT_NAME = Artic;
+				PRODUCT_NAME = ArticApp;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -727,7 +761,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8A79AB6528569F820073086C /* Build configuration list for PBXProject "Artic" */ = {
+		8A79AB6528569F820073086C /* Build configuration list for PBXProject "ArticApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A79AB9C28569F830073086C /* Debug */,
@@ -736,7 +770,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A79AB9E28569F830073086C /* Build configuration list for PBXNativeTarget "Artic (iOS)" */ = {
+		8A79AB9E28569F830073086C /* Build configuration list for PBXNativeTarget "ArticApp (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A79AB9F28569F830073086C /* Debug */,
@@ -745,7 +779,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A79ABA128569F830073086C /* Build configuration list for PBXNativeTarget "Artic (macOS)" */ = {
+		8A79ABA128569F830073086C /* Build configuration list for PBXNativeTarget "ArticApp (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A79ABA228569F830073086C /* Debug */,
@@ -775,13 +809,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8AAEC4BA285FB6EE00885691 /* ArticCore */ = {
+		8A1A8743285FCECC00EA7BF2 /* Artic */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = ArticCore;
+			productName = Artic;
 		};
-		8AAEC4BC285FB6F500885691 /* ArticCore */ = {
+		8A1A8748285FCF0D00EA7BF2 /* Artic */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = ArticCore;
+			productName = Artic;
 		};
 /* End XCSwiftPackageProductDependency section */
 

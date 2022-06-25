@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  ArticApp
+
+  Created by jocmp on 6/21/22.
+*/
+
+"addLoanForm.title" = "Add Loan";
+"addLoanForm.name" = "Name";
+"addLoanForm.currentLoanAmount" = "Current Loan Amount";
+"addLoanForm.minimumMonthlyPayment" = "Minimum monthly payment";
+"addLoanForm.interestRate" = "Interest Rate";
+"addLoanForm.saveButton" = "Save";

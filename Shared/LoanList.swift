@@ -2,12 +2,11 @@
 //  ContentView.swift
 //  Shared
 //
-//  Created by Josiah Campbell on 6/12/22.
+//  Created by jocmp on 6/12/22.
 //
 
 import SwiftUI
 import CoreData
-import ArticCore
 
 struct LoanList: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -16,7 +15,11 @@ struct LoanList: View {
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Loan.createdAt, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Loan>
+    private var results: FetchedResults<Loan>
+
+    private var loans: [PresentedLoan] {
+        results.map { PresentedLoan.from(loan: $0) }
+    }
 
     var body: some View {
         NavigationView {
@@ -27,11 +30,11 @@ struct LoanList: View {
                     Text("Overview")
                 }
                 Section("Loans") {
-                    ForEach(items) { item in
+                    ForEach(loans) { loan in
                         NavigationLink {
-                            Text("Item at \(item.createdAt!, formatter: itemFormatter)")
+                            LoanDetail(id: loan.id)
                         } label: {
-                            Text(item.name ?? "")
+                            Text(loan.name)
                         }
                     }
                     .onDelete(perform: deleteItems)
@@ -62,7 +65,7 @@ struct LoanList: View {
 
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
+            offsets.map { results[$0] }.forEach(viewContext.delete)
 
             do {
                 try viewContext.save()
