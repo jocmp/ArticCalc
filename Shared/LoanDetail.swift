@@ -1,6 +1,6 @@
 //
 //  LoanDetail.swift
-//  Artic
+//
 //
 //  Created by jocmp on 6/19/22.
 //
@@ -20,12 +20,12 @@ struct LoanDetail: View {
     var body: some View {
         let loan = PresentedLoan.from(loan: loans.first)
 
-        VStack {
+        VStack(alignment: .leading) {
             Text(loan.name)
-            Text("Minimum Payment")
-            Text(loan.minimumAmount)
             Text("Current Amount")
             Text(loan.currentAmount)
+            Text("Minimum Payment")
+            Text(loan.minimumAmount)
             Text("Interest Rate")
             Text(loan.interestRate)
         }

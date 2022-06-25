@@ -8,23 +8,25 @@
 import Foundation
 
 public struct MoneyParser {
-    public static func parse(_ value: String, localeCode: String) -> NSNumber {
+    public static func parse(_ value: String, localeCode: String = Locale.current.identifier) -> Decimal? {
         let cleanedValue = value.replacingOccurrences(of: " ", with: "")
         let formatter = makeInputFormatter(localeCode: localeCode)
-        return formatter.number(from: cleanedValue) ?? 0
+        return formatter.number(from: cleanedValue)?.decimalValue
     }
 
     public static func format(stringLiteral: String, localeCode: String, currencyCode: String) -> String {
+        guard let parsed = parse(stringLiteral, localeCode: localeCode) else { return "" }
+
         return format(
-            parse(stringLiteral, localeCode: localeCode),
+            parsed,
             localeCode: localeCode,
             currencyCode: currencyCode
         )
     }
 
-    public static func format(_ value: NSNumber, localeCode: String, currencyCode: String) -> String {
+    public static func format(_ value: Decimal, localeCode: String, currencyCode: String) -> String {
         let formatter = makeCurrencyFormatter(localeCode: localeCode, currencyCode: currencyCode)
-        return formatter.string(from: value) ?? ""
+        return formatter.string(from: value as NSNumber) ?? ""
     }
 }
 

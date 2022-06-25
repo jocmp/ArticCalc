@@ -9,16 +9,16 @@ import Foundation
 import Money
 
 enum Monetize {
-    static func from(minorUnits: Int, currencyCode: String) -> AnyMoney? {
+    static func from(_ value: Decimal, currencyCode: String) -> AnyMoney? {
         switch currencyCode {
         case "EUR":
-            return Money<EUR>(minorUnits: minorUnits)
+            return Money<EUR>(value)
         case "CAD":
-            return Money<CAD>(minorUnits: minorUnits)
+            return Money<CAD>(value)
         case "GBP":
-            return Money<GBP>(minorUnits: minorUnits)
+            return Money<GBP>(value)
         case "USD":
-            return Money<USD>(minorUnits: minorUnits)
+            return Money<USD>(value)
         default:
             return nil
         }

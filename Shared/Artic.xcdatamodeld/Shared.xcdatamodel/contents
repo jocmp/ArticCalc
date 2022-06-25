@@ -3,13 +3,13 @@
     <entity name="Loan" representedClassName="Loan" syncable="YES" codeGenerationType="class">
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="currencyCode" optional="YES" attributeType="String"/>
-        <attribute name="currentAmountCents" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="currentAmount" optional="YES" attributeType="Decimal" defaultValueString="0"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="interestRate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="minimumPaymentCents" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="interestRate" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="minimumPayment" optional="YES" attributeType="Decimal" defaultValueString="0"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Loan" positionX="-367.9609375" positionY="-238.49609375" width="128" height="14"/>
+        <element name="Loan" positionX="-367.9609375" positionY="-238.49609375" width="128" height="134"/>
     </elements>
 </model>

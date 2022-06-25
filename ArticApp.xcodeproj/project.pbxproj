@@ -148,6 +148,8 @@
 		8A79AB6628569F820073086C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8A79AB6C28569F830073086C /* Assets.xcassets */,
+				8A79AB6728569F820073086C /* Artic.xcdatamodeld */,
 				8AAEC4D5285FBFBB00885691 /* AddLoanForm.swift */,
 				8AAEC4D9285FBFBB00885691 /* AddLoanModal.swift */,
 				8A79AB6928569F820073086C /* ArticApp.swift */,
@@ -155,8 +157,6 @@
 				8AAEC4D7285FBFBB00885691 /* LoanList.swift */,
 				8AAEC4D8285FBFBB00885691 /* LoanOverview.swift */,
 				8AAEC4DC285FBFBB00885691 /* Persistence.swift */,
-				8A79AB6C28569F830073086C /* Assets.xcassets */,
-				8A79AB6728569F820073086C /* Artic.xcdatamodeld */,
 				8AAEC4D6285FBFBB00885691 /* ArticApp.swift */,
 				8AAEC4F0285FC0AF00885691 /* LoanDetail.swift */,
 				8A1A8745285FCEF100EA7BF2 /* ArticLoan+CoreData.swift */,

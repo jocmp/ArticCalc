@@ -16,7 +16,7 @@ class MonetizeTests: XCTestCase {
             "GBP",
             "USD"
         ].forEach { supportedCurrencyCode in
-            let money = Monetize.from(minorUnits: 10_01, currencyCode: supportedCurrencyCode)!
+            let money = Monetize.from(10.01, currencyCode: supportedCurrencyCode)!
             XCTAssertEqual(money.amount, 10.01)
             XCTAssertEqual(money.currency.code, supportedCurrencyCode)
         }
@@ -24,6 +24,6 @@ class MonetizeTests: XCTestCase {
     
     func testUnsupportedCurrency() {
         let unsupportedCode = "bogus"
-        XCTAssertNil(Monetize.from(minorUnits: 10_00, currencyCode: unsupportedCode))
+        XCTAssertNil(Monetize.from(10.00, currencyCode: unsupportedCode))
     }
 }
