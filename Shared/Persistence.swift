@@ -31,8 +31,8 @@ struct PersistenceController {
             newItem.createdAt = Date()
             newItem.id = id
             newItem.name = "Loan #\(idx + 1)"
-            newItem.currentAmountCents = 3000_00
-            newItem.minimumPaymentCents = 10_00
+            newItem.currentAmount = 3000.00
+            newItem.minimumPayment = 10.00
             newItem.interestRate = 5.0
         }
         do {

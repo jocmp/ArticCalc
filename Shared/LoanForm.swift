@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 import Money
+import Artic
 
 class LoanForm: ObservableObject {
     @Published var currentAmount = ""
@@ -25,9 +26,9 @@ class LoanForm: ObservableObject {
         loan.createdAt = Date()
         loan.id = UUID()
         loan.name = name
-        loan.currentAmountCents = parseToCents(currentAmount)
-        loan.interestRate = Double(interestRate)!
-        loan.minimumPaymentCents = parseToCents(minimumPayment)
+        loan.currentAmount = parseMoneyToDecimal(currentAmount)
+        loan.interestRate = NSDecimalNumber(string: interestRate)
+        loan.minimumPayment = parseMoneyToDecimal(minimumPayment)
         loan.currencyCode = "USD"
         
         do {
@@ -58,7 +59,9 @@ class LoanForm: ObservableObject {
             switch error {
             case .Presence:
                 return value.isEmpty
-            case .MoneyFormat, .DoubleFormat:
+            case .MoneyFormat:
+                return MoneyParser.parse(value) == nil
+            case .DoubleFormat:
                 return Double(value) == nil
             }
         }()
@@ -68,16 +71,13 @@ class LoanForm: ObservableObject {
         }
     }
     
-    func parseToCents(_ value: String) -> Int64 {
-        return Int64(exactly: Money<USD>.parse(value).cents())!
+    func parseMoneyToDecimal(_ value: String) -> NSDecimalNumber {
+        let parsed = MoneyParser.parse(value)!
+        return NSDecimalNumber(decimal: parsed)
     }
 }
 
 extension Money {
-    static func parse(_ value: String) -> Money {
-        return .init(stringLiteral: value)
-    }
-
     func cents() -> Int {
         let integerValue = (self.amount * pow(10, self.currency.minorUnit))
         return NSDecimalNumber(decimal: integerValue).intValue

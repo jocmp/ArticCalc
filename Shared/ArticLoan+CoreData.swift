@@ -23,9 +23,9 @@ fileprivate func fromArticLoan(loan: Loan?) -> Artic.Loan {
     return .init(
         id: withID(id: safeLoan.id),
         name: safeLoan.name ?? "",
-        interestRate: safeLoan.interestRate,
-        currentAmountCents: Int(safeLoan.currentAmountCents),
-        minimumPaymentCents: Int(safeLoan.minimumPaymentCents)
+        interestRate: safeLoan.interestRate!.decimalValue,
+        currentAmount: safeLoan.currentAmount!.decimalValue,
+        minimumPayment: safeLoan.minimumPayment!.decimalValue
     )
 }
 

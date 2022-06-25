@@ -9,6 +9,7 @@ import Foundation
 import Artic
 
 struct PresentedLoan: Identifiable {
+    let percentFormatter = makePercentFormatter()
     let loan: Artic.Loan
     
     init(loan: Artic.Loan) {
@@ -24,20 +25,29 @@ struct PresentedLoan: Identifiable {
     }
 
     var currentAmount: String {
-        loan.currentAmount.localized()
+        loan.currentAmount.displayed()
     }
 
     var minimumAmount: String {
-        loan.minimumPayment.localized()
+        loan.minimumPayment.displayed()
     }
 
     var interestRate: String {
-        loan.interestRate.formatted()
+        let rounded = (loan.interestRate / 100.0) as NSNumber
+        return percentFormatter.string(from: rounded)!
     }
 }
 
+fileprivate func makePercentFormatter() -> NumberFormatter {
+    let formatter = NumberFormatter()
+    formatter.numberStyle = .percent
+    formatter.minimumFractionDigits = 2
+    formatter.maximumFractionDigits = 2
+    return formatter
+}
+
 fileprivate extension AnyMoney {
-    func localized() -> String {
-        MoneyParser.format(amount as NSNumber, localeCode: Locale.current.identifier, currencyCode: currency.code)
+    func displayed() -> String {
+        MoneyParser.format(amount, localeCode: Locale.current.identifier, currencyCode: currency.code)
     }
 }

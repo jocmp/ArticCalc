@@ -18,10 +18,10 @@ class MoneyParserTests: XCTestCase {
             (localeCode: "de_DE", input: "3.000,01"),
             (localeCode: "fr_FR", input: "3 000,01")
         ].forEach { testCase in
-            let expected = NSNumber(value: 3000.01)
+            let expected = Decimal(3000.01)
             let (localeCode, input) = testCase
 
-            let result = MoneyParser.parse(input, localeCode: localeCode)
+            let result = MoneyParser.parse(input, localeCode: localeCode)!
 
             XCTAssertEqual(result, expected, "\(result) is not equal to \(expected) for locale code \(localeCode)")
         }
@@ -35,7 +35,7 @@ class MoneyParserTests: XCTestCase {
             (localeCode: "de_DE", expected: "3.000,01 $"),
             (localeCode: "fr_FR", expected: "3 000,01 $US")
         ].forEach { testCase in
-            let input = NSNumber(value: 3000.01)
+            let input = Decimal(3000.01)
             let (localeCode, expected) = testCase
 
             let result = MoneyParser.format(input, localeCode: localeCode, currencyCode: "USD")
