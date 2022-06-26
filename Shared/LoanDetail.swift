@@ -23,7 +23,7 @@ struct LoanDetail: View {
         VStack(alignment: .leading) {
             Text(loan.name)
             Text("Current Amount")
-            Text(loan.currentAmount)
+            Text(loan.startingBalance)
             Text("Minimum Payment")
             Text(loan.minimumAmount)
             Text("Interest Rate")

@@ -11,7 +11,7 @@ import Money
 import Arctic
 
 class LoanForm: ObservableObject {
-    @Published var currentAmount = ""
+    @Published var startingBalance = ""
     @Published var interestRate = ""
     @Published var minimumPayment: String = ""
     @Published var name = ""
@@ -26,7 +26,7 @@ class LoanForm: ObservableObject {
         loan.createdAt = Date()
         loan.id = UUID()
         loan.name = name
-        loan.currentAmount = parseMoneyToDecimal(currentAmount)
+        loan.startingBalance = parseMoneyToDecimal(startingBalance)
         loan.interestRate = NSDecimalNumber(string: interestRate)
         loan.minimumPayment = parseMoneyToDecimal(minimumPayment)
         loan.currencyCode = "USD"
@@ -44,7 +44,7 @@ class LoanForm: ObservableObject {
 
         validate(name, name: "name", for: .Presence)
         validate(minimumPayment, name: "minimumPayment", for: .MoneyFormat)
-        validate(currentAmount, name: "currentAmount", for: .MoneyFormat)
+        validate(startingBalance, name: "startingBalance", for: .MoneyFormat)
         validate(interestRate, name: "interestRate", for: .DoubleFormat)
 
         return isValid
