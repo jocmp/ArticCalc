@@ -17,7 +17,7 @@ struct AddLoanForm: View {
         VStack {
             Text("addLoanForm.title")
             TextField("name", text: $form.name)
-            TextField("currentLoanAmount", text: $form.currentAmount)
+            TextField("currentLoanAmount", text: $form.startingBalance)
             TextField("minimumMonthlyPayment", text: $form.minimumPayment)
             TextField("interestRate", text: $form.interestRate)
 

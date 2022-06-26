@@ -24,8 +24,8 @@ struct PresentedLoan: Identifiable {
         loan.name
     }
 
-    var currentAmount: String {
-        loan.currentAmount.displayed()
+    var startingBalance: String {
+        loan.startingBalance.displayed()
     }
 
     var minimumAmount: String {

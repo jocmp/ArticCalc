@@ -24,7 +24,7 @@ fileprivate func fromArcticLoan(loan: Loan?) -> Arctic.Loan {
         id: withID(id: safeLoan.id),
         name: safeLoan.name ?? "",
         interestRate: safeLoan.interestRate!.decimalValue,
-        currentAmount: safeLoan.currentAmount!.decimalValue,
+        startingBalance: safeLoan.startingBalance!.decimalValue,
         minimumPayment: safeLoan.minimumPayment!.decimalValue
     )
 }
