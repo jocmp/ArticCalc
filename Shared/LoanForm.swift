@@ -1,6 +1,6 @@
 //
 //  LoanForm.swift
-//  Artic
+//  Arctic
 //
 //  Created by jocmp on 6/19/22.
 //
@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 import Money
-import Artic
+import Arctic
 
 class LoanForm: ObservableObject {
     @Published var currentAmount = ""
@@ -21,7 +21,7 @@ class LoanForm: ObservableObject {
         if !validate() {
             return false
         }
-        
+
         let loan = Loan(context: viewContext)
         loan.createdAt = Date()
         loan.id = UUID()
@@ -30,7 +30,7 @@ class LoanForm: ObservableObject {
         loan.interestRate = NSDecimalNumber(string: interestRate)
         loan.minimumPayment = parseMoneyToDecimal(minimumPayment)
         loan.currencyCode = "USD"
-        
+
         do {
             try viewContext.save()
             return true
@@ -38,22 +38,22 @@ class LoanForm: ObservableObject {
             return false
         }
     }
-    
+
     func validate() -> Bool {
         errors.removeAll()
-        
+
         validate(name, name: "name", for: .Presence)
         validate(minimumPayment, name: "minimumPayment", for: .MoneyFormat)
         validate(currentAmount, name: "currentAmount", for: .MoneyFormat)
         validate(interestRate, name: "interestRate", for: .DoubleFormat)
-        
+
         return isValid
     }
 
     var isValid: Bool {
         errors.isEmpty
     }
-    
+
     func validate(_ value: String, name: String, for error: Error.ErrorType) {
         let isInvalid: Bool = {
             switch error {
@@ -70,7 +70,7 @@ class LoanForm: ObservableObject {
             errors.append(Error(attribute: name, type: error))
         }
     }
-    
+
     func parseMoneyToDecimal(_ value: String) -> NSDecimalNumber {
         let parsed = MoneyParser.parse(value)!
         return NSDecimalNumber(decimal: parsed)

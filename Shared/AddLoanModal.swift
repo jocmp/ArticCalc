@@ -1,6 +1,6 @@
 //
 //  AddLoanModal.swift
-//  Artic
+//  Arctic
 //
 //  Created by jocmp on 6/19/22.
 //
@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddLoanModal: View {
     @Environment(\.dismiss) var dismiss
-    
+
     var body: some View {
         AddLoanForm() {
             dismiss()

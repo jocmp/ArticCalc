@@ -1,21 +1,21 @@
 //
-//  ArticLoan+CoreData.swift
-//  ArticApp
+//  ArcticLoan+CoreData.swift
+//  ArcticApp
 //
 //  Created by jocmp on 6/19/22.
 //
 
 import Foundation
-import Artic
+import Arctic
 import Money
 
 extension PresentedLoan {
     static func from(loan: Loan?) -> PresentedLoan {
-        return .init(loan: fromArticLoan(loan: loan))
+        return .init(loan: fromArcticLoan(loan: loan))
     }
 }
 
-fileprivate func fromArticLoan(loan: Loan?) -> Artic.Loan {
+fileprivate func fromArcticLoan(loan: Loan?) -> Arctic.Loan {
     guard let safeLoan = loan else {
          return .init(id: withID())
     }
@@ -33,6 +33,6 @@ fileprivate func withID(id: UUID? = nil) -> String {
     guard let safeID = id else {
         return UUID().uuidString
     }
-    
+
     return safeID.uuidString
 }

@@ -1,5 +1,5 @@
 //
-//  ArticApp.swift
+//  ArcticApp.swift
 //  Shared
 //
 //  Created by jocmp on 6/12/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct ArticApp: App {
+struct ArcticApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {

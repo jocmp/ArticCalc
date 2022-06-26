@@ -1,6 +1,6 @@
 //
 //  AddLoanForm.swift
-//  Artic
+//  Arctic
 //
 //  Created by jocmp on 6/19/22.
 //
@@ -20,7 +20,7 @@ struct AddLoanForm: View {
             TextField("currentLoanAmount", text: $form.currentAmount)
             TextField("minimumMonthlyPayment", text: $form.minimumPayment)
             TextField("interestRate", text: $form.interestRate)
-            
+
             Button("addLoanForm.saveButton") {
                 addLoan()
             }
@@ -32,7 +32,7 @@ struct AddLoanForm: View {
         }.padding()
     }
 
-    func addLoan() {        
+    func addLoan() {
         if form.create(viewContext: viewContext) {
             guard let safeOnLoanAdded = onLoanAdded else { return }
             safeOnLoanAdded()

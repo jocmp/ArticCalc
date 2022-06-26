@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A1A8744285FCECC00EA7BF2 /* Artic in Frameworks */ = {isa = PBXBuildFile; productRef = 8A1A8743285FCECC00EA7BF2 /* Artic */; };
-		8A1A8746285FCEF100EA7BF2 /* ArticLoan+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8745285FCEF100EA7BF2 /* ArticLoan+CoreData.swift */; };
-		8A1A8747285FCEF100EA7BF2 /* ArticLoan+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8745285FCEF100EA7BF2 /* ArticLoan+CoreData.swift */; };
-		8A1A8749285FCF0D00EA7BF2 /* Artic in Frameworks */ = {isa = PBXBuildFile; productRef = 8A1A8748285FCF0D00EA7BF2 /* Artic */; };
+		8A1A8744285FCECC00EA7BF2 /* Arctic in Frameworks */ = {isa = PBXBuildFile; productRef = 8A1A8743285FCECC00EA7BF2 /* Arctic */; };
+		8A1A8746285FCEF100EA7BF2 /* ArcticLoan+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8745285FCEF100EA7BF2 /* ArcticLoan+CoreData.swift */; };
+		8A1A8747285FCEF100EA7BF2 /* ArcticLoan+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8745285FCEF100EA7BF2 /* ArcticLoan+CoreData.swift */; };
+		8A1A8749285FCF0D00EA7BF2 /* Arctic in Frameworks */ = {isa = PBXBuildFile; productRef = 8A1A8748285FCF0D00EA7BF2 /* Arctic */; };
 		8A660815286231DA000BF0D0 /* PresentedLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A660814286231DA000BF0D0 /* PresentedLoan.swift */; };
 		8A660816286231DA000BF0D0 /* PresentedLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A660814286231DA000BF0D0 /* PresentedLoan.swift */; };
 		8A66081828625DDD000BF0D0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A66081728625DDD000BF0D0 /* Localizable.strings */; };
@@ -21,18 +21,18 @@
 		8A79AB8528569F830073086C /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB8428569F830073086C /* Tests_iOSLaunchTests.swift */; };
 		8A79AB8F28569F830073086C /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB8E28569F830073086C /* Tests_macOS.swift */; };
 		8A79AB9128569F830073086C /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB9028569F830073086C /* Tests_macOSLaunchTests.swift */; };
-		8A79AB9228569F830073086C /* Artic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6728569F820073086C /* Artic.xcdatamodeld */; };
-		8A79AB9328569F830073086C /* Artic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6728569F820073086C /* Artic.xcdatamodeld */; };
-		8A79AB9428569F830073086C /* ArticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6928569F820073086C /* ArticApp.swift */; };
-		8A79AB9528569F830073086C /* ArticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6928569F820073086C /* ArticApp.swift */; };
+		8A79AB9228569F830073086C /* Arctic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6728569F820073086C /* Arctic.xcdatamodeld */; };
+		8A79AB9328569F830073086C /* Arctic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6728569F820073086C /* Arctic.xcdatamodeld */; };
+		8A79AB9428569F830073086C /* ArcticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6928569F820073086C /* ArcticApp.swift */; };
+		8A79AB9528569F830073086C /* ArcticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6928569F820073086C /* ArcticApp.swift */; };
 		8A79AB9A28569F830073086C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A79AB6C28569F830073086C /* Assets.xcassets */; };
 		8A79AB9B28569F830073086C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A79AB6C28569F830073086C /* Assets.xcassets */; };
 		8AAEC4DD285FBFBB00885691 /* LoanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D4285FBFBB00885691 /* LoanForm.swift */; };
 		8AAEC4DE285FBFBB00885691 /* LoanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D4285FBFBB00885691 /* LoanForm.swift */; };
 		8AAEC4DF285FBFBB00885691 /* AddLoanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D5285FBFBB00885691 /* AddLoanForm.swift */; };
 		8AAEC4E0285FBFBB00885691 /* AddLoanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D5285FBFBB00885691 /* AddLoanForm.swift */; };
-		8AAEC4E1285FBFBB00885691 /* ArticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D6285FBFBB00885691 /* ArticApp.swift */; };
-		8AAEC4E2285FBFBB00885691 /* ArticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D6285FBFBB00885691 /* ArticApp.swift */; };
+		8AAEC4E1285FBFBB00885691 /* ArcticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D6285FBFBB00885691 /* ArcticApp.swift */; };
+		8AAEC4E2285FBFBB00885691 /* ArcticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D6285FBFBB00885691 /* ArcticApp.swift */; };
 		8AAEC4E3285FBFBB00885691 /* LoanList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D7285FBFBB00885691 /* LoanList.swift */; };
 		8AAEC4E4285FBFBB00885691 /* LoanList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D7285FBFBB00885691 /* LoanList.swift */; };
 		8AAEC4E5285FBFBB00885691 /* LoanOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D8285FBFBB00885691 /* LoanOverview.swift */; };
@@ -51,28 +51,28 @@
 			containerPortal = 8A79AB6228569F820073086C /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8A79AB7028569F830073086C;
-			remoteInfo = "Artic (iOS)";
+			remoteInfo = "Arctic (iOS)";
 		};
 		8A79AB8B28569F830073086C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8A79AB6228569F820073086C /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8A79AB7628569F830073086C;
-			remoteInfo = "Artic (macOS)";
+			remoteInfo = "Arctic (macOS)";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8A1A8742285FCEBE00EA7BF2 /* Artic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Artic; sourceTree = "<group>"; };
-		8A1A8745285FCEF100EA7BF2 /* ArticLoan+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticLoan+CoreData.swift"; sourceTree = "<group>"; };
+		8A1A8742285FCEBE00EA7BF2 /* Arctic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Arctic; sourceTree = "<group>"; };
+		8A1A8745285FCEF100EA7BF2 /* ArcticLoan+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArcticLoan+CoreData.swift"; sourceTree = "<group>"; };
 		8A660814286231DA000BF0D0 /* PresentedLoan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentedLoan.swift; sourceTree = "<group>"; };
 		8A66081728625DDD000BF0D0 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8A66081A28625F6D000BF0D0 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		8A79AB6828569F820073086C /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
-		8A79AB6928569F820073086C /* ArticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticApp.swift; sourceTree = "<group>"; };
+		8A79AB6928569F820073086C /* ArcticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcticApp.swift; sourceTree = "<group>"; };
 		8A79AB6C28569F830073086C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8A79AB7128569F830073086C /* ArticApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArticApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A79AB7728569F830073086C /* ArticApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArticApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A79AB7128569F830073086C /* ArcticApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcticApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A79AB7728569F830073086C /* ArcticApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcticApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A79AB7928569F830073086C /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		8A79AB7E28569F830073086C /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A79AB8228569F830073086C /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		8A79AB9028569F830073086C /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		8AAEC4D4285FBFBB00885691 /* LoanForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanForm.swift; sourceTree = "<group>"; };
 		8AAEC4D5285FBFBB00885691 /* AddLoanForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLoanForm.swift; sourceTree = "<group>"; };
-		8AAEC4D6285FBFBB00885691 /* ArticApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticApp.swift; sourceTree = "<group>"; };
+		8AAEC4D6285FBFBB00885691 /* ArcticApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcticApp.swift; sourceTree = "<group>"; };
 		8AAEC4D7285FBFBB00885691 /* LoanList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanList.swift; sourceTree = "<group>"; };
 		8AAEC4D8285FBFBB00885691 /* LoanOverview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanOverview.swift; sourceTree = "<group>"; };
 		8AAEC4D9285FBFBB00885691 /* AddLoanModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLoanModal.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A1A8744285FCECC00EA7BF2 /* Artic in Frameworks */,
+				8A1A8744285FCECC00EA7BF2 /* Arctic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A1A8749285FCF0D00EA7BF2 /* Artic in Frameworks */,
+				8A1A8749285FCF0D00EA7BF2 /* Arctic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +127,7 @@
 		8A1A8741285FCEBE00EA7BF2 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				8A1A8742285FCEBE00EA7BF2 /* Artic */,
+				8A1A8742285FCEBE00EA7BF2 /* Arctic */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -149,17 +149,17 @@
 			isa = PBXGroup;
 			children = (
 				8A79AB6C28569F830073086C /* Assets.xcassets */,
-				8A79AB6728569F820073086C /* Artic.xcdatamodeld */,
+				8A79AB6728569F820073086C /* Arctic.xcdatamodeld */,
 				8AAEC4D5285FBFBB00885691 /* AddLoanForm.swift */,
 				8AAEC4D9285FBFBB00885691 /* AddLoanModal.swift */,
-				8A79AB6928569F820073086C /* ArticApp.swift */,
+				8A79AB6928569F820073086C /* ArcticApp.swift */,
 				8AAEC4D4285FBFBB00885691 /* LoanForm.swift */,
 				8AAEC4D7285FBFBB00885691 /* LoanList.swift */,
 				8AAEC4D8285FBFBB00885691 /* LoanOverview.swift */,
 				8AAEC4DC285FBFBB00885691 /* Persistence.swift */,
-				8AAEC4D6285FBFBB00885691 /* ArticApp.swift */,
+				8AAEC4D6285FBFBB00885691 /* ArcticApp.swift */,
 				8AAEC4F0285FC0AF00885691 /* LoanDetail.swift */,
-				8A1A8745285FCEF100EA7BF2 /* ArticLoan+CoreData.swift */,
+				8A1A8745285FCEF100EA7BF2 /* ArcticLoan+CoreData.swift */,
 				8A660814286231DA000BF0D0 /* PresentedLoan.swift */,
 				8A66081728625DDD000BF0D0 /* Localizable.strings */,
 				8A66081A28625F6D000BF0D0 /* Errors.swift */,
@@ -170,8 +170,8 @@
 		8A79AB7228569F830073086C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8A79AB7128569F830073086C /* ArticApp.app */,
-				8A79AB7728569F830073086C /* ArticApp.app */,
+				8A79AB7128569F830073086C /* ArcticApp.app */,
+				8A79AB7728569F830073086C /* ArcticApp.app */,
 				8A79AB7E28569F830073086C /* Tests iOS.xctest */,
 				8A79AB8A28569F830073086C /* Tests macOS.xctest */,
 			);
@@ -214,9 +214,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8A79AB7028569F830073086C /* ArticApp (iOS) */ = {
+		8A79AB7028569F830073086C /* ArcticApp (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A79AB9E28569F830073086C /* Build configuration list for PBXNativeTarget "ArticApp (iOS)" */;
+			buildConfigurationList = 8A79AB9E28569F830073086C /* Build configuration list for PBXNativeTarget "ArcticApp (iOS)" */;
 			buildPhases = (
 				8A79AB6D28569F830073086C /* Sources */,
 				8A79AB6E28569F830073086C /* Frameworks */,
@@ -226,17 +226,17 @@
 			);
 			dependencies = (
 			);
-			name = "ArticApp (iOS)";
+			name = "ArcticApp (iOS)";
 			packageProductDependencies = (
-				8A1A8743285FCECC00EA7BF2 /* Artic */,
+				8A1A8743285FCECC00EA7BF2 /* Arctic */,
 			);
-			productName = "Artic (iOS)";
-			productReference = 8A79AB7128569F830073086C /* ArticApp.app */;
+			productName = "Arctic (iOS)";
+			productReference = 8A79AB7128569F830073086C /* ArcticApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8A79AB7628569F830073086C /* ArticApp (macOS) */ = {
+		8A79AB7628569F830073086C /* ArcticApp (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A79ABA128569F830073086C /* Build configuration list for PBXNativeTarget "ArticApp (macOS)" */;
+			buildConfigurationList = 8A79ABA128569F830073086C /* Build configuration list for PBXNativeTarget "ArcticApp (macOS)" */;
 			buildPhases = (
 				8A79AB7328569F830073086C /* Sources */,
 				8A79AB7428569F830073086C /* Frameworks */,
@@ -246,12 +246,12 @@
 			);
 			dependencies = (
 			);
-			name = "ArticApp (macOS)";
+			name = "ArcticApp (macOS)";
 			packageProductDependencies = (
-				8A1A8748285FCF0D00EA7BF2 /* Artic */,
+				8A1A8748285FCF0D00EA7BF2 /* Arctic */,
 			);
-			productName = "Artic (macOS)";
-			productReference = 8A79AB7728569F830073086C /* ArticApp.app */;
+			productName = "Arctic (macOS)";
+			productReference = 8A79AB7728569F830073086C /* ArcticApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8A79AB7D28569F830073086C /* Tests iOS */ = {
@@ -316,7 +316,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8A79AB6528569F820073086C /* Build configuration list for PBXProject "ArticApp" */;
+			buildConfigurationList = 8A79AB6528569F820073086C /* Build configuration list for PBXProject "ArcticApp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -329,8 +329,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8A79AB7028569F830073086C /* ArticApp (iOS) */,
-				8A79AB7628569F830073086C /* ArticApp (macOS) */,
+				8A79AB7028569F830073086C /* ArcticApp (iOS) */,
+				8A79AB7628569F830073086C /* ArcticApp (macOS) */,
 				8A79AB7D28569F830073086C /* Tests iOS */,
 				8A79AB8928569F830073086C /* Tests macOS */,
 			);
@@ -378,15 +378,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A660815286231DA000BF0D0 /* PresentedLoan.swift in Sources */,
-				8A79AB9228569F830073086C /* Artic.xcdatamodeld in Sources */,
+				8A79AB9228569F830073086C /* Arctic.xcdatamodeld in Sources */,
 				8AAEC4DD285FBFBB00885691 /* LoanForm.swift in Sources */,
-				8A79AB9428569F830073086C /* ArticApp.swift in Sources */,
-				8AAEC4E1285FBFBB00885691 /* ArticApp.swift in Sources */,
+				8A79AB9428569F830073086C /* ArcticApp.swift in Sources */,
+				8AAEC4E1285FBFBB00885691 /* ArcticApp.swift in Sources */,
 				8A66081B28625F6D000BF0D0 /* Errors.swift in Sources */,
 				8AAEC4DF285FBFBB00885691 /* AddLoanForm.swift in Sources */,
 				8AAEC4E7285FBFBB00885691 /* AddLoanModal.swift in Sources */,
 				8AAEC4F1285FC0AF00885691 /* LoanDetail.swift in Sources */,
-				8A1A8746285FCEF100EA7BF2 /* ArticLoan+CoreData.swift in Sources */,
+				8A1A8746285FCEF100EA7BF2 /* ArcticLoan+CoreData.swift in Sources */,
 				8AAEC4E5285FBFBB00885691 /* LoanOverview.swift in Sources */,
 				8AAEC4E3285FBFBB00885691 /* LoanList.swift in Sources */,
 				8AAEC4EB285FBFBB00885691 /* Persistence.swift in Sources */,
@@ -398,15 +398,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A660816286231DA000BF0D0 /* PresentedLoan.swift in Sources */,
-				8A79AB9328569F830073086C /* Artic.xcdatamodeld in Sources */,
+				8A79AB9328569F830073086C /* Arctic.xcdatamodeld in Sources */,
 				8AAEC4DE285FBFBB00885691 /* LoanForm.swift in Sources */,
-				8A79AB9528569F830073086C /* ArticApp.swift in Sources */,
-				8AAEC4E2285FBFBB00885691 /* ArticApp.swift in Sources */,
+				8A79AB9528569F830073086C /* ArcticApp.swift in Sources */,
+				8AAEC4E2285FBFBB00885691 /* ArcticApp.swift in Sources */,
 				8A66081C28625F6D000BF0D0 /* Errors.swift in Sources */,
 				8AAEC4E0285FBFBB00885691 /* AddLoanForm.swift in Sources */,
 				8AAEC4E8285FBFBB00885691 /* AddLoanModal.swift in Sources */,
 				8AAEC4F2285FC0AF00885691 /* LoanDetail.swift in Sources */,
-				8A1A8747285FCEF100EA7BF2 /* ArticLoan+CoreData.swift in Sources */,
+				8A1A8747285FCEF100EA7BF2 /* ArcticLoan+CoreData.swift in Sources */,
 				8AAEC4E6285FBFBB00885691 /* LoanOverview.swift in Sources */,
 				8AAEC4E4285FBFBB00885691 /* LoanList.swift in Sources */,
 				8AAEC4EC285FBFBB00885691 /* Persistence.swift in Sources */,
@@ -436,12 +436,12 @@
 /* Begin PBXTargetDependency section */
 		8A79AB8028569F830073086C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8A79AB7028569F830073086C /* ArticApp (iOS) */;
+			target = 8A79AB7028569F830073086C /* ArcticApp (iOS) */;
 			targetProxy = 8A79AB7F28569F830073086C /* PBXContainerItemProxy */;
 		};
 		8A79AB8C28569F830073086C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8A79AB7628569F830073086C /* ArticApp (macOS) */;
+			target = 8A79AB7628569F830073086C /* ArcticApp (macOS) */;
 			targetProxy = 8A79AB8B28569F830073086C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -577,8 +577,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jocmp.Artic;
-				PRODUCT_NAME = ArticApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jocmp.Arctic;
+				PRODUCT_NAME = ArcticApp;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -607,8 +607,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jocmp.Artic;
-				PRODUCT_NAME = ArticApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jocmp.Arctic;
+				PRODUCT_NAME = ArcticApp;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -637,8 +637,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jocmp.Artic;
-				PRODUCT_NAME = ArticApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jocmp.Arctic;
+				PRODUCT_NAME = ArcticApp;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -665,8 +665,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jocmp.Artic;
-				PRODUCT_NAME = ArticApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jocmp.Arctic;
+				PRODUCT_NAME = ArcticApp;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -689,7 +689,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Artic (iOS)";
+				TEST_TARGET_NAME = "Arctic (iOS)";
 			};
 			name = Debug;
 		};
@@ -709,7 +709,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Artic (iOS)";
+				TEST_TARGET_NAME = "Arctic (iOS)";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -729,7 +729,7 @@
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Artic (macOS)";
+				TEST_TARGET_NAME = "Arctic (macOS)";
 			};
 			name = Debug;
 		};
@@ -748,14 +748,14 @@
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Artic (macOS)";
+				TEST_TARGET_NAME = "Arctic (macOS)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8A79AB6528569F820073086C /* Build configuration list for PBXProject "ArticApp" */ = {
+		8A79AB6528569F820073086C /* Build configuration list for PBXProject "ArcticApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A79AB9C28569F830073086C /* Debug */,
@@ -764,7 +764,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A79AB9E28569F830073086C /* Build configuration list for PBXNativeTarget "ArticApp (iOS)" */ = {
+		8A79AB9E28569F830073086C /* Build configuration list for PBXNativeTarget "ArcticApp (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A79AB9F28569F830073086C /* Debug */,
@@ -773,7 +773,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A79ABA128569F830073086C /* Build configuration list for PBXNativeTarget "ArticApp (macOS)" */ = {
+		8A79ABA128569F830073086C /* Build configuration list for PBXNativeTarget "ArcticApp (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A79ABA228569F830073086C /* Debug */,
@@ -803,24 +803,24 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8A1A8743285FCECC00EA7BF2 /* Artic */ = {
+		8A1A8743285FCECC00EA7BF2 /* Arctic */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Artic;
+			productName = Arctic;
 		};
-		8A1A8748285FCF0D00EA7BF2 /* Artic */ = {
+		8A1A8748285FCF0D00EA7BF2 /* Arctic */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Artic;
+			productName = Arctic;
 		};
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		8A79AB6728569F820073086C /* Artic.xcdatamodeld */ = {
+		8A79AB6728569F820073086C /* Arctic.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				8A79AB6828569F820073086C /* Shared.xcdatamodel */,
 			);
 			currentVersion = 8A79AB6828569F820073086C /* Shared.xcdatamodel */;
-			path = Artic.xcdatamodeld;
+			path = Arctic.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

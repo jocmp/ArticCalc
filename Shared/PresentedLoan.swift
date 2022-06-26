@@ -1,18 +1,18 @@
 //
 //  PresentedLoan.swift
-//  ArticApp
+//  ArcticApp
 //
 //  Created by jocmp on 6/20/22.
 //
 
 import Foundation
-import Artic
+import Arctic
 
 struct PresentedLoan: Identifiable {
     let percentFormatter = makePercentFormatter()
-    let loan: Artic.Loan
-    
-    init(loan: Artic.Loan) {
+    let loan: Arctic.Loan
+
+    init(loan: Arctic.Loan) {
         self.loan = loan
     }
 

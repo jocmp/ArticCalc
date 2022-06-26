@@ -1,12 +1,12 @@
 //
 //  MonetizeTests.swift
-//  
+//
 //
 //  Created by jocmp on 6/25/22.
 //
 
 import XCTest
-@testable import Artic
+@testable import Arctic
 
 class MonetizeTests: XCTestCase {
     func testSupportedCurrencies() throws {
@@ -21,7 +21,7 @@ class MonetizeTests: XCTestCase {
             XCTAssertEqual(money.currency.code, supportedCurrencyCode)
         }
     }
-    
+
     func testUnsupportedCurrency() {
         let unsupportedCode = "bogus"
         XCTAssertNil(Monetize.from(10.00, currencyCode: unsupportedCode))

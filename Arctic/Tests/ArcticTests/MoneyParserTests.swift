@@ -1,12 +1,12 @@
 //
 //  MoneyParserTests.swift
-//  Artic (iOS)
+//  Arctic (iOS)
 //
 //  Created by jocmp on 6/24/22.
 //
 
 import XCTest
-@testable import Artic
+@testable import Arctic
 
 class MoneyParserTests: XCTestCase {
     func testParsingLocaleInputToNumericValue() throws {

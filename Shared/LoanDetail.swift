@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreData
-import Artic
+import Arctic
 import Money
 
 struct LoanDetail: View {
@@ -16,7 +16,7 @@ struct LoanDetail: View {
     init(id: String) {
         _loans = FetchRequest(fetchRequest: Loan.findByID(id: id))
     }
-    
+
     var body: some View {
         let loan = PresentedLoan.from(loan: loans.first)
 

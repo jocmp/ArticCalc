@@ -18,7 +18,7 @@ struct PersistenceController {
         UUID(),
         UUID()
     ]
-    
+
     static var sampleID: String {
         return testIDs.first!.uuidString
     }
@@ -48,7 +48,7 @@ struct PersistenceController {
     let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "Artic")
+        container = NSPersistentCloudKitContainer(name: "Arctic")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

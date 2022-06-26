@@ -1,6 +1,6 @@
 //
 //  LoanOverview.swift
-//  Artic
+//  Arctic
 //
 //  Created by jocmp on 6/19/22.
 //

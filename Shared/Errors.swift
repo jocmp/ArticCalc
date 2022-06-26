@@ -1,6 +1,6 @@
 //
 //  Errors.swift
-//  ArticApp
+//  ArcticApp
 //
 //  Created by jocmp on 6/21/22.
 //
@@ -16,11 +16,11 @@ struct Error: Identifiable {
         case MoneyFormat
         case DoubleFormat
     }
-    
+
     var id: String {
         return "\(attribute):\(type)"
     }
-    
+
     var printed: String {
         switch type {
         case .Presence:

@@ -1,5 +1,5 @@
 import XCTest
-@testable import Artic
+@testable import Arctic
 
 final class LoanTests: XCTestCase {
     func testInit() throws {
