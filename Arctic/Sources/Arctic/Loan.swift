@@ -1,8 +1,10 @@
 import Foundation
 import Money
 
+public typealias LoanID = String
+
 public struct Loan: Identifiable {
-    public let id: String
+    public let id: LoanID
     public let name: String
     public let createdAt: Date
     public let interestRate: Decimal
