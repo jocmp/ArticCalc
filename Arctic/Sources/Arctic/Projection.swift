@@ -34,7 +34,7 @@ extension Projection {
 }
 
 struct Projection {
-    private var mapping: [LoanID : LoanBalanceSheet]
+    private var mapping: [LoanID : LoanAccountBalance]
     private var loans: [Loan]
     private var monthlyPaymentAmount: Decimal
     private var remainingPaymentAmount: Decimal
@@ -71,7 +71,7 @@ struct Projection {
     }
     
     private mutating func makeMininumPayments() {
-        for loan in sortedLoans {
+        sortedLoans.forEach { loan in
             let balanceSheet = findBalanceSheet(id: loan.id)
             self.remainingPaymentAmount -= balanceSheet.makeMinimumPayment()
         }
@@ -79,7 +79,7 @@ struct Projection {
     }
     
     private mutating func makeExtraPayments() {
-        for loan in sortedLoans {
+        sortedLoans.forEach { loan in
             let balanceSheet = findBalanceSheet(id: loan.id)
             self.remainingPaymentAmount -= balanceSheet.makeExtraPayment(extraPayment: remainingPaymentAmount)
         }
@@ -113,7 +113,7 @@ struct Projection {
         }
     }
 
-    func findBalanceSheet(id: LoanID) -> LoanBalanceSheet {
+    func findBalanceSheet(id: LoanID) -> LoanAccountBalance {
         return mapping[id]!
     }
 
@@ -138,12 +138,12 @@ struct Projection {
     }
 }
 
-class LoanBalanceSheet {
+class LoanAccountBalance {
     let loan: Loan
-    var rows: [BalanceSheetRow]
+    var rows: [AccountBalanceRow]
     var currentEntry: MonthlyLoanEntry? = nil
     
-    init(loan: Loan, rows: [BalanceSheetRow]) {
+    init(loan: Loan, rows: [AccountBalanceRow]) {
         self.loan = loan
         self.rows = rows
     }
@@ -174,7 +174,7 @@ class LoanBalanceSheet {
         guard let safeEntry = currentEntry else { return }
 
         rows.append(
-            BalanceSheetRow(
+            AccountBalanceRow(
                 date: safeEntry.date,
                 loanID: loan.id,
                 interestBalance: safeEntry.interestBalance,
@@ -205,20 +205,20 @@ class LoanBalanceSheet {
         return lastEntry?.principalBalance ?? loan.startingBalance.amount
     }
     
-    private var lastEntry: BalanceSheetRow? {
+    private var lastEntry: AccountBalanceRow? {
         return rows.last
     }
 }
 
-func makeLoanPaymentMapping(_ loans: [Loan]) -> [LoanID : LoanBalanceSheet] {
-    var mapping = [LoanID : LoanBalanceSheet]()
+func makeLoanPaymentMapping(_ loans: [Loan]) -> [LoanID : LoanAccountBalance] {
+    var mapping = [LoanID : LoanAccountBalance]()
     loans.forEach { loan in
-        mapping.updateValue(LoanBalanceSheet(loan: loan, rows: []), forKey: loan.id)
+        mapping.updateValue(LoanAccountBalance(loan: loan, rows: []), forKey: loan.id)
     }
     return mapping
 }
 
-struct BalanceSheetRow {
+struct AccountBalanceRow {
     let date: Date
     let loanID: String
     let interestBalance: Decimal
