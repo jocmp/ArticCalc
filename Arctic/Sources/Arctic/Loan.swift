@@ -12,9 +12,9 @@ public struct Loan: Identifiable {
     public init(
         id: String,
         name: String = "",
-        interestRate: Decimal = 0,
-        startingBalance: Decimal = 0,
-        minimumPayment: Decimal = 0,
+        interestRate: Decimal,
+        startingBalance: Decimal,
+        minimumPayment: Decimal,
         createdAt: Date = Date.init(),
         currencyCode: String = "USD"
     ) {
