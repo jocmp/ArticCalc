@@ -59,7 +59,7 @@ struct MonthlyLoanEntry {
     }
     
     var interestRatePercent: Decimal {
-        return loan.interestRate / 100.0 / 12.0
+        return loan.interestRate / Decimal(100) / Decimal(12)
     }
     
     var currentBalance: Decimal {

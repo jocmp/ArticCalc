@@ -1,5 +1,5 @@
 //
-//  Projection.swift
+//  PaymentPlan.swift
 //  
 //
 //  Created by jocmp on 6/26/22.
@@ -13,7 +13,7 @@ enum PayoffStrategy {
     case Avalanche
 }
 
-struct Projection {
+struct PaymentPlan {
     private var mapping: [LoanID : LoanAccountBalance]
     private var loans: [Loan]
     private var monthlyPaymentAmount: Decimal

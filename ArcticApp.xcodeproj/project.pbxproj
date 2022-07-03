@@ -27,6 +27,10 @@
 		8A79AB9528569F830073086C /* ArcticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79AB6928569F820073086C /* ArcticApp.swift */; };
 		8A79AB9A28569F830073086C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A79AB6C28569F830073086C /* Assets.xcassets */; };
 		8A79AB9B28569F830073086C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A79AB6C28569F830073086C /* Assets.xcassets */; };
+		8A7D732E287229F1008A61AD /* PresentedPaymentPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D732D287229F1008A61AD /* PresentedPaymentPlan.swift */; };
+		8A7D732F287229F1008A61AD /* PresentedPaymentPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D732D287229F1008A61AD /* PresentedPaymentPlan.swift */; };
+		8A7D733128722B5A008A61AD /* Loan+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D733028722B5A008A61AD /* Loan+Query.swift */; };
+		8A7D733228722B5A008A61AD /* Loan+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D733028722B5A008A61AD /* Loan+Query.swift */; };
 		8AAEC4DD285FBFBB00885691 /* LoanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D4285FBFBB00885691 /* LoanForm.swift */; };
 		8AAEC4DE285FBFBB00885691 /* LoanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D4285FBFBB00885691 /* LoanForm.swift */; };
 		8AAEC4DF285FBFBB00885691 /* AddLoanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D5285FBFBB00885691 /* AddLoanForm.swift */; };
@@ -80,6 +84,8 @@
 		8A79AB8A28569F830073086C /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A79AB8E28569F830073086C /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		8A79AB9028569F830073086C /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		8A7D732D287229F1008A61AD /* PresentedPaymentPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedPaymentPlan.swift; sourceTree = "<group>"; };
+		8A7D733028722B5A008A61AD /* Loan+Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Loan+Query.swift"; sourceTree = "<group>"; };
 		8AAEC4D4285FBFBB00885691 /* LoanForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanForm.swift; sourceTree = "<group>"; };
 		8AAEC4D5285FBFBB00885691 /* AddLoanForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLoanForm.swift; sourceTree = "<group>"; };
 		8AAEC4D6285FBFBB00885691 /* ArcticApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcticApp.swift; sourceTree = "<group>"; };
@@ -148,21 +154,23 @@
 		8A79AB6628569F820073086C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				8A79AB6C28569F830073086C /* Assets.xcassets */,
-				8A79AB6728569F820073086C /* Arctic.xcdatamodeld */,
+				8A66081728625DDD000BF0D0 /* Localizable.strings */,
 				8AAEC4D5285FBFBB00885691 /* AddLoanForm.swift */,
 				8AAEC4D9285FBFBB00885691 /* AddLoanModal.swift */,
 				8A79AB6928569F820073086C /* ArcticApp.swift */,
+				8A1A8745285FCEF100EA7BF2 /* ArcticLoan+CoreData.swift */,
+				8A66081A28625F6D000BF0D0 /* Errors.swift */,
+				8A7D733028722B5A008A61AD /* Loan+Query.swift */,
+				8AAEC4F0285FC0AF00885691 /* LoanDetail.swift */,
 				8AAEC4D4285FBFBB00885691 /* LoanForm.swift */,
 				8AAEC4D7285FBFBB00885691 /* LoanList.swift */,
 				8AAEC4D8285FBFBB00885691 /* LoanOverview.swift */,
 				8AAEC4DC285FBFBB00885691 /* Persistence.swift */,
-				8AAEC4D6285FBFBB00885691 /* ArcticApp.swift */,
-				8AAEC4F0285FC0AF00885691 /* LoanDetail.swift */,
-				8A1A8745285FCEF100EA7BF2 /* ArcticLoan+CoreData.swift */,
 				8A660814286231DA000BF0D0 /* PresentedLoan.swift */,
-				8A66081728625DDD000BF0D0 /* Localizable.strings */,
-				8A66081A28625F6D000BF0D0 /* Errors.swift */,
+				8A7D732D287229F1008A61AD /* PresentedPaymentPlan.swift */,
+				8A79AB6C28569F830073086C /* Assets.xcassets */,
+				8A79AB6728569F820073086C /* Arctic.xcdatamodeld */,
+				8AAEC4D6285FBFBB00885691 /* ArcticApp.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -380,6 +388,7 @@
 				8A660815286231DA000BF0D0 /* PresentedLoan.swift in Sources */,
 				8A79AB9228569F830073086C /* Arctic.xcdatamodeld in Sources */,
 				8AAEC4DD285FBFBB00885691 /* LoanForm.swift in Sources */,
+				8A7D732E287229F1008A61AD /* PresentedPaymentPlan.swift in Sources */,
 				8A79AB9428569F830073086C /* ArcticApp.swift in Sources */,
 				8AAEC4E1285FBFBB00885691 /* ArcticApp.swift in Sources */,
 				8A66081B28625F6D000BF0D0 /* Errors.swift in Sources */,
@@ -389,6 +398,7 @@
 				8A1A8746285FCEF100EA7BF2 /* ArcticLoan+CoreData.swift in Sources */,
 				8AAEC4E5285FBFBB00885691 /* LoanOverview.swift in Sources */,
 				8AAEC4E3285FBFBB00885691 /* LoanList.swift in Sources */,
+				8A7D733128722B5A008A61AD /* Loan+Query.swift in Sources */,
 				8AAEC4EB285FBFBB00885691 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +410,7 @@
 				8A660816286231DA000BF0D0 /* PresentedLoan.swift in Sources */,
 				8A79AB9328569F830073086C /* Arctic.xcdatamodeld in Sources */,
 				8AAEC4DE285FBFBB00885691 /* LoanForm.swift in Sources */,
+				8A7D732F287229F1008A61AD /* PresentedPaymentPlan.swift in Sources */,
 				8A79AB9528569F830073086C /* ArcticApp.swift in Sources */,
 				8AAEC4E2285FBFBB00885691 /* ArcticApp.swift in Sources */,
 				8A66081C28625F6D000BF0D0 /* Errors.swift in Sources */,
@@ -409,6 +420,7 @@
 				8A1A8747285FCEF100EA7BF2 /* ArcticLoan+CoreData.swift in Sources */,
 				8AAEC4E6285FBFBB00885691 /* LoanOverview.swift in Sources */,
 				8AAEC4E4285FBFBB00885691 /* LoanList.swift in Sources */,
+				8A7D733228722B5A008A61AD /* Loan+Query.swift in Sources */,
 				8AAEC4EC285FBFBB00885691 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

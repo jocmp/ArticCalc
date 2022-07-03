@@ -9,7 +9,7 @@ import Foundation
 import XCTest
 @testable import Arctic
 
-final class ProjectionTests: XCTestCase {
+final class PaymentPlanTests: XCTestCase {
     func testSingleLoan() throws {
         let loan = Loan(
             id: "mock-uuid-1",
@@ -19,12 +19,12 @@ final class ProjectionTests: XCTestCase {
             currencyCode: "USD"
         )
         
-        let projection = Projection.calculate(
+        let paymentPlan = PaymentPlan.calculate(
             loans: [loan],
             monthlyPaymentAmount: 20.00
         )
         
-        let sheet = projection.findBalanceSheet(id: loan.id)
+        let sheet = paymentPlan.findBalanceSheet(id: loan.id)
         
         let firstRow = sheet.rows.first!
         XCTAssertEqual(firstRow.paymentAmount, Decimal(20.00))
@@ -46,12 +46,12 @@ final class ProjectionTests: XCTestCase {
             currencyCode: "USD"
         )
 
-        let projection = Projection.calculate(
+        let paymentPlan = PaymentPlan.calculate(
             loans: [loan],
             monthlyPaymentAmount: 50.00
         )
 
-        let sheet = projection.findBalanceSheet(id: loan.id)
+        let sheet = paymentPlan.findBalanceSheet(id: loan.id)
         
         let firstRow = sheet.rows.first!
         XCTAssertEqual(firstRow.paymentAmount, Decimal(50.00))
@@ -93,13 +93,13 @@ final class ProjectionTests: XCTestCase {
         )
 
         let loans = [highInterestLoan, lowInterestLoan, lowInterestLowBalanceLoan]
-        let projection = Projection.calculate(
+        let paymentPlan = PaymentPlan.calculate(
             loans: loans,
             monthlyPaymentAmount: 50.00
         )
         
-        XCTAssertEqual(projection.principalPaidAmount, Decimal(950.00))
-        XCTAssertEqual(projection.interestPaidAmount, Decimal(87.27))
+        XCTAssertEqual(paymentPlan.principalPaidAmount, Decimal(950.00))
+        XCTAssertEqual(paymentPlan.interestPaidAmount, Decimal(87.27))
     }
     
     func testMultipleLoansWithSnowballStrategy() throws {
@@ -131,14 +131,14 @@ final class ProjectionTests: XCTestCase {
         )
 
         let loans = [highInterestLoan, lowInterestLoan, lowInterestLowBalanceLoan]
-        let projection = Projection.calculate(
+        let paymentPlan = PaymentPlan.calculate(
             loans: loans,
             monthlyPaymentAmount: 50.00,
             strategy: .Snowball
         )
 
-        XCTAssertEqual(projection.principalPaidAmount, Decimal(950.0))
+        XCTAssertEqual(paymentPlan.principalPaidAmount, Decimal(950.0))
         // Snowball will result in a higher overall interest payment than 
-        XCTAssertEqual(projection.interestPaidAmount, Decimal(89.25))
+        XCTAssertEqual(paymentPlan.interestPaidAmount, Decimal(89.25))
     }
 }
