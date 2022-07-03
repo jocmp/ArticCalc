@@ -18,7 +18,7 @@ struct LoanDetail: View {
     }
 
     var body: some View {
-        let loan = PresentedLoan.from(loan: loans.first)
+        let loan = PresentedLoan.from(loan: loans.first!)
 
         VStack(alignment: .leading) {
             Text(loan.name)
@@ -36,15 +36,5 @@ struct LoanDetail_Previews: PreviewProvider {
     static var previews: some View {
         LoanDetail(id: PersistenceController.sampleID)
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
-
-extension Loan {
-    static func findByID(id: String) -> NSFetchRequest<Loan> {
-      let request = Loan.fetchRequest()
-      request.predicate = NSPredicate(format: "id = %@", id)
-      request.sortDescriptors = []
-      request.fetchLimit = 1
-      return request
     }
 }

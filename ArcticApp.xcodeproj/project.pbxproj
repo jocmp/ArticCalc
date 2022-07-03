@@ -39,8 +39,8 @@
 		8AAEC4E2285FBFBB00885691 /* ArcticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D6285FBFBB00885691 /* ArcticApp.swift */; };
 		8AAEC4E3285FBFBB00885691 /* LoanList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D7285FBFBB00885691 /* LoanList.swift */; };
 		8AAEC4E4285FBFBB00885691 /* LoanList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D7285FBFBB00885691 /* LoanList.swift */; };
-		8AAEC4E5285FBFBB00885691 /* LoanOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D8285FBFBB00885691 /* LoanOverview.swift */; };
-		8AAEC4E6285FBFBB00885691 /* LoanOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D8285FBFBB00885691 /* LoanOverview.swift */; };
+		8AAEC4E5285FBFBB00885691 /* PaymentPlanIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D8285FBFBB00885691 /* PaymentPlanIndex.swift */; };
+		8AAEC4E6285FBFBB00885691 /* PaymentPlanIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D8285FBFBB00885691 /* PaymentPlanIndex.swift */; };
 		8AAEC4E7285FBFBB00885691 /* AddLoanModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D9285FBFBB00885691 /* AddLoanModal.swift */; };
 		8AAEC4E8285FBFBB00885691 /* AddLoanModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4D9285FBFBB00885691 /* AddLoanModal.swift */; };
 		8AAEC4EB285FBFBB00885691 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC4DC285FBFBB00885691 /* Persistence.swift */; };
@@ -90,7 +90,7 @@
 		8AAEC4D5285FBFBB00885691 /* AddLoanForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLoanForm.swift; sourceTree = "<group>"; };
 		8AAEC4D6285FBFBB00885691 /* ArcticApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcticApp.swift; sourceTree = "<group>"; };
 		8AAEC4D7285FBFBB00885691 /* LoanList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanList.swift; sourceTree = "<group>"; };
-		8AAEC4D8285FBFBB00885691 /* LoanOverview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanOverview.swift; sourceTree = "<group>"; };
+		8AAEC4D8285FBFBB00885691 /* PaymentPlanIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentPlanIndex.swift; sourceTree = "<group>"; };
 		8AAEC4D9285FBFBB00885691 /* AddLoanModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLoanModal.swift; sourceTree = "<group>"; };
 		8AAEC4DC285FBFBB00885691 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8AAEC4F0285FC0AF00885691 /* LoanDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDetail.swift; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 				8AAEC4F0285FC0AF00885691 /* LoanDetail.swift */,
 				8AAEC4D4285FBFBB00885691 /* LoanForm.swift */,
 				8AAEC4D7285FBFBB00885691 /* LoanList.swift */,
-				8AAEC4D8285FBFBB00885691 /* LoanOverview.swift */,
+				8AAEC4D8285FBFBB00885691 /* PaymentPlanIndex.swift */,
 				8AAEC4DC285FBFBB00885691 /* Persistence.swift */,
 				8A660814286231DA000BF0D0 /* PresentedLoan.swift */,
 				8A7D732D287229F1008A61AD /* PresentedPaymentPlan.swift */,
@@ -396,7 +396,7 @@
 				8AAEC4E7285FBFBB00885691 /* AddLoanModal.swift in Sources */,
 				8AAEC4F1285FC0AF00885691 /* LoanDetail.swift in Sources */,
 				8A1A8746285FCEF100EA7BF2 /* ArcticLoan+CoreData.swift in Sources */,
-				8AAEC4E5285FBFBB00885691 /* LoanOverview.swift in Sources */,
+				8AAEC4E5285FBFBB00885691 /* PaymentPlanIndex.swift in Sources */,
 				8AAEC4E3285FBFBB00885691 /* LoanList.swift in Sources */,
 				8A7D733128722B5A008A61AD /* Loan+Query.swift in Sources */,
 				8AAEC4EB285FBFBB00885691 /* Persistence.swift in Sources */,
@@ -418,7 +418,7 @@
 				8AAEC4E8285FBFBB00885691 /* AddLoanModal.swift in Sources */,
 				8AAEC4F2285FC0AF00885691 /* LoanDetail.swift in Sources */,
 				8A1A8747285FCEF100EA7BF2 /* ArcticLoan+CoreData.swift in Sources */,
-				8AAEC4E6285FBFBB00885691 /* LoanOverview.swift in Sources */,
+				8AAEC4E6285FBFBB00885691 /* PaymentPlanIndex.swift in Sources */,
 				8AAEC4E4285FBFBB00885691 /* LoanList.swift in Sources */,
 				8A7D733228722B5A008A61AD /* Loan+Query.swift in Sources */,
 				8AAEC4EC285FBFBB00885691 /* Persistence.swift in Sources */,

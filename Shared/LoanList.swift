@@ -25,7 +25,7 @@ struct LoanList: View {
         NavigationView {
             List {
                 NavigationLink {
-                    LoanOverview()
+                    PaymentPlanIndex()
                 } label: {
                     Text("Overview")
                 }

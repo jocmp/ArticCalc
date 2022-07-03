@@ -8,7 +8,7 @@
 import Foundation
 
 extension PaymentPlan {
-    static func calculate(loans: [Loan], monthlyPaymentAmount: Decimal, strategy: PayoffStrategy = .Avalanche) -> PaymentPlan {
+    public static func calculate(loans: [Loan], monthlyPaymentAmount: Decimal, strategy: PayoffStrategy = .Avalanche) -> PaymentPlan {
         let oldestPersonEverAgeInYears = 122
         let reasonablePayoffInMonths = oldestPersonEverAgeInYears * 12
 

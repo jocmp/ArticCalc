@@ -10,23 +10,21 @@ import Arctic
 import Money
 
 extension PresentedLoan {
-    static func from(loan: Loan?) -> PresentedLoan {
-        return .init(loan: fromArcticLoan(loan: loan))
+    static func from(loan: Loan) -> PresentedLoan {
+        return .init(loan: loan.asArcticLoan())
     }
 }
 
-fileprivate func fromArcticLoan(loan: Loan?) -> Arctic.Loan {
-    guard let safeLoan = loan else {
-         return .init(id: withID())
+extension Loan {
+    func asArcticLoan() -> Arctic.Loan {
+        return .init(
+            id: withID(id: id),
+            name: name ?? "",
+            interestRate: interestRate!.decimalValue,
+            startingBalance: startingBalance!.decimalValue,
+            minimumPayment: minimumPayment!.decimalValue
+        )
     }
-
-    return .init(
-        id: withID(id: safeLoan.id),
-        name: safeLoan.name ?? "",
-        interestRate: safeLoan.interestRate!.decimalValue,
-        startingBalance: safeLoan.startingBalance!.decimalValue,
-        minimumPayment: safeLoan.minimumPayment!.decimalValue
-    )
 }
 
 fileprivate func withID(id: UUID? = nil) -> String {

@@ -8,12 +8,12 @@
 import Foundation
 
 
-enum PayoffStrategy {
+public enum PayoffStrategy {
     case Snowball
     case Avalanche
 }
 
-struct PaymentPlan {
+public struct PaymentPlan {
     private var mapping: [LoanID : LoanAccountBalance]
     private var loans: [Loan]
     private var monthlyPaymentAmount: Decimal
@@ -26,6 +26,24 @@ struct PaymentPlan {
         self.monthlyPaymentAmount = monthlyPaymentAmount
         self.remainingPaymentAmount = monthlyPaymentAmount
         self.strategy = strategy
+    }
+    
+    public var principalPaidAmount: Decimal {
+        return mapping.values.reduce(Decimal(0), { accumulator, sheet in
+            accumulator + sheet.loan.startingBalance.amount
+        })
+    }
+    
+    public var interestPaidAmount: Decimal {
+        return mapping.values.reduce(Decimal(0), { accumulator, value in
+            return accumulator + value.rows.last!.totalInterestPaid
+        })
+    }
+    
+    public var minimumPaymentsAmount: Decimal {
+        return mapping.values.reduce(Decimal(0), { accumulator, value in
+            return accumulator + value.loan.minimumPayment.amount
+        })
     }
     
     mutating func makeMonthlyPayments(date: Date) {
@@ -103,18 +121,6 @@ struct PaymentPlan {
     
     var sortedLoans: [Loan] {
         return loans.sorted(by: payoffStrategySort)
-    }
-    
-    var principalPaidAmount: Decimal {
-        return mapping.values.reduce(Decimal(0), { accumulator, sheet in
-            accumulator + sheet.loan.startingBalance.amount
-        })
-    }
-    
-    var interestPaidAmount: Decimal {
-        return mapping.values.reduce(Decimal(0), { accumulator, value in
-            return accumulator + value.rows.last!.totalInterestPaid
-        })
     }
 }
 
