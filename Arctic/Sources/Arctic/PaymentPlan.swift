@@ -14,14 +14,14 @@ public enum PayoffStrategy {
 }
 
 public struct PaymentPlan {
-    private var mapping: [LoanID : LoanAccountBalance]
+    private var monthlyBalances: [LoanID : LoanBalanceSheet]
     private var loans: [Loan]
     private var monthlyPaymentAmount: Decimal
     private var remainingPaymentAmount: Decimal
     private let strategy: PayoffStrategy
     
     init(loans: [Loan], monthlyPaymentAmount: Decimal, strategy: PayoffStrategy = .Avalanche) {
-        self.mapping = makeLoanPaymentMapping(loans)
+        self.monthlyBalances = makeLoanPaymentMapping(loans)
         self.loans = loans
         self.monthlyPaymentAmount = monthlyPaymentAmount
         self.remainingPaymentAmount = monthlyPaymentAmount
@@ -29,21 +29,25 @@ public struct PaymentPlan {
     }
     
     public var principalPaidAmount: Decimal {
-        return mapping.values.reduce(Decimal(0), { accumulator, sheet in
+        return monthlyBalances.values.reduce(Decimal(0), { accumulator, sheet in
             accumulator + sheet.loan.startingBalance.amount
         })
     }
     
     public var interestPaidAmount: Decimal {
-        return mapping.values.reduce(Decimal(0), { accumulator, value in
+        return monthlyBalances.values.reduce(Decimal(0), { accumulator, value in
             return accumulator + value.rows.last!.totalInterestPaid
         })
     }
     
     public var minimumPaymentsAmount: Decimal {
-        return mapping.values.reduce(Decimal(0), { accumulator, value in
+        return monthlyBalances.values.reduce(Decimal(0), { accumulator, value in
             return accumulator + value.loan.minimumPayment.amount
         })
+    }
+    
+    public var monthlyBalanceSheets: [LoanBalanceSheet] {
+        return Array(monthlyBalances.values)
     }
     
     mutating func makeMonthlyPayments(date: Date) {
@@ -94,8 +98,8 @@ public struct PaymentPlan {
     func payoffStrategySort(lhs: Loan, rhs: Loan) -> Bool {
         switch strategy {
         case .Snowball:
-            let lhsBalances = mapping[lhs.id]!
-            let rhsBalances = mapping[rhs.id]!
+            let lhsBalances = monthlyBalances[lhs.id]!
+            let rhsBalances = monthlyBalances[rhs.id]!
             
             return lhsBalances.currentTotalBalance < rhsBalances.currentTotalBalance
         case .Avalanche:
@@ -104,15 +108,15 @@ public struct PaymentPlan {
     }
     
     private mutating func removePaidOffLoans() {
-        mapping.forEach { (loanID, balanceSheet) in
+        monthlyBalances.forEach { (loanID, balanceSheet) in
             if (balanceSheet.isPaidOff) {
                 loans.removeAll(where: { $0.id == loanID })
             }
         }
     }
     
-    func findBalanceSheet(id: LoanID) -> LoanAccountBalance {
-        return mapping[id]!
+    func findBalanceSheet(id: LoanID) -> LoanBalanceSheet {
+        return monthlyBalances[id]!
     }
     
     var hasRemainingLoans: Bool {
@@ -124,10 +128,10 @@ public struct PaymentPlan {
     }
 }
 
-fileprivate func makeLoanPaymentMapping(_ loans: [Loan]) -> [LoanID : LoanAccountBalance] {
-    var mapping = [LoanID : LoanAccountBalance]()
+fileprivate func makeLoanPaymentMapping(_ loans: [Loan]) -> [LoanID : LoanBalanceSheet] {
+    var mapping = [LoanID : LoanBalanceSheet]()
     loans.forEach { loan in
-        mapping.updateValue(LoanAccountBalance(loan: loan, rows: []), forKey: loan.id)
+        mapping.updateValue(LoanBalanceSheet(loan: loan, rows: []), forKey: loan.id)
     }
     return mapping
 }

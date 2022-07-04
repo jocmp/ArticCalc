@@ -12,8 +12,8 @@ import Arctic
 class PresentedPaymentPlan: ObservableObject {
     private let loans: [Loan]
     private var paymentPlan: PaymentPlan
-    var minimumPayment: Int
-    @Published var monthlyPayment: Int {
+    let minimumPayment: Double
+    @Published var monthlyPayment: Double {
         didSet {
             calculate()
         }
@@ -22,14 +22,16 @@ class PresentedPaymentPlan: ObservableObject {
     init(viewContext: NSManagedObjectContext) {
         self.loans = try! viewContext.fetch(Loan.findAll())
         let arcticLoans = loans.map { $0.asArcticLoan() }
-        minimumPayment = (arcticLoans.reduce(0, { accumulator, loan in
-            accumulator + loan.minimumPayment.amount
-        }) as NSDecimalNumber).intValue
+        
+        minimumPayment = arcticLoans
+            .reduce(0, { $0 + $1.minimumPayment.amount })
+            .toDouble()
+        monthlyPayment = minimumPayment
+
         paymentPlan = PaymentPlan.calculate(
             loans: arcticLoans,
             monthlyPaymentAmount: Decimal(minimumPayment)
         )
-        monthlyPayment = minimumPayment
     }
     
     func calculate() {
@@ -45,5 +47,33 @@ class PresentedPaymentPlan: ObservableObject {
     
     var principalPaid: String {
         return paymentPlan.principalPaidAmount.formatted()
+    }
+    
+    public var monthlyBalanceSheets: [LoanBalanceSheet] {
+        return paymentPlan.monthlyBalanceSheets.sorted()
+    }
+}
+
+extension LoanBalanceSheet: Identifiable, Comparable {
+    public static func < (lhs: Arctic.LoanBalanceSheet, rhs: Arctic.LoanBalanceSheet) -> Bool {
+        return lhs.name < rhs.name
+    }
+    
+    public var name: String {
+        return loan.name
+    }
+    
+    public var id: String {
+        return name
+    }
+    
+    public static func == (lhs: Arctic.LoanBalanceSheet, rhs: Arctic.LoanBalanceSheet) -> Bool {
+        return lhs.name == rhs.name
+    }
+}
+
+extension Decimal {
+    func toDouble() -> Double {
+        return (self as NSDecimalNumber).doubleValue
     }
 }

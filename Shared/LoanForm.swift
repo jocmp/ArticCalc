@@ -18,7 +18,7 @@ class LoanForm: ObservableObject {
     @Published var errors: [Error] = []
 
     func create(viewContext: NSManagedObjectContext) -> Bool {
-        if !validate() {
+        if !validate(viewContext) {
             return false
         }
 
@@ -39,13 +39,13 @@ class LoanForm: ObservableObject {
         }
     }
 
-    func validate() -> Bool {
+    func validate(_ viewContext: NSManagedObjectContext) -> Bool {
         errors.removeAll()
 
-        validate(name, name: "name", for: .Presence)
-        validate(minimumPayment, name: "minimumPayment", for: .MoneyFormat)
-        validate(startingBalance, name: "startingBalance", for: .MoneyFormat)
-        validate(interestRate, name: "interestRate", for: .DoubleFormat)
+        validateName(name, viewContext)
+        validateMoneyFormat(minimumPayment, name: "minimumPayment")
+        validateMoneyFormat(startingBalance, name: "startingBalance")
+        validateDoubleFormat(interestRate, name: "interestRate")
 
         return isValid
     }
@@ -53,21 +53,34 @@ class LoanForm: ObservableObject {
     var isValid: Bool {
         errors.isEmpty
     }
+    
+    func validateMoneyFormat(_ value: String, name: String) {
+        if MoneyParser.parse(value) == nil {
+            errors.append(Error(attribute: name, type: .MoneyFormat))
+        }
+    }
+    
+    func validateDoubleFormat(_ value: String, name: String) {
+        if Double(value) == nil {
+            errors.append(Error(attribute: name, type: .DoubleFormat))
+        }
+    }
+    
+    func validateName(_ value: String, _ viewContext: NSManagedObjectContext) {
+        if value.isEmpty {
+            errors.append(Error(attribute: "name", type: .Presence))
+        }
+        
+        if isNameTaken(value, viewContext) {
+            errors.append(Error(attribute: "name", type: .Uniqueness))
+        }
+    }
 
-    func validate(_ value: String, name: String, for error: Error.ErrorType) {
-        let isInvalid: Bool = {
-            switch error {
-            case .Presence:
-                return value.isEmpty
-            case .MoneyFormat:
-                return MoneyParser.parse(value) == nil
-            case .DoubleFormat:
-                return Double(value) == nil
-            }
-        }()
-
-        if isInvalid {
-            errors.append(Error(attribute: name, type: error))
+    func isNameTaken(_ value: String, _ viewContext: NSManagedObjectContext) -> Bool {
+        do {
+            return !(try viewContext.fetch(Loan.findByName(name: value)).isEmpty)
+        } catch {
+            return true
         }
     }
 

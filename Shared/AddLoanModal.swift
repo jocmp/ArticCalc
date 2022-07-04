@@ -11,7 +11,7 @@ struct AddLoanModal: View {
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
-        AddLoanForm() {
+        AddLoanFormDetail() {
             dismiss()
         }
     }

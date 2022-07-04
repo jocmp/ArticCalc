@@ -1,5 +1,5 @@
 //
-//  AddLoanForm.swift
+//  AddLoanFormDetail.swift
 //  Arctic
 //
 //  Created by jocmp on 6/19/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddLoanForm: View {
+struct AddLoanFormDetail: View {
     @Environment(\.managedObjectContext) private var viewContext
     @StateObject var form = LoanForm()
 
@@ -40,8 +40,8 @@ struct AddLoanForm: View {
     }
 }
 
-struct AddLoanForm_Previews: PreviewProvider {
+struct AddLoanFormDetail_Previews: PreviewProvider {
     static var previews: some View {
-        AddLoanForm()
+        AddLoanFormDetail()
     }
 }

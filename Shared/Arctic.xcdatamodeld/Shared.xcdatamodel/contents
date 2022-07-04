@@ -8,6 +8,11 @@
         <attribute name="minimumPayment" optional="YES" attributeType="Decimal" defaultValueString="0"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="startingBalance" optional="YES" attributeType="Decimal" defaultValueString="0"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
         <element name="Loan" positionX="-367.9609375" positionY="-238.49609375" width="128" height="134"/>

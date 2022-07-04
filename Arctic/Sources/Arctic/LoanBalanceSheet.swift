@@ -1,5 +1,5 @@
 //
-//  LoanAccountBalance.swift
+//  LoanBalanceSheet.swift
 //  
 //
 //  Created by jocmp on 6/27/22.
@@ -7,12 +7,12 @@
 
 import Foundation
 
-class LoanAccountBalance {
-    let loan: Loan
-    var rows: [LoanAccountBalanceRow]
+public class LoanBalanceSheet {
+    public let loan: Loan
+    public var rows: [LoanBalanceSheetRow]
     var currentEntry: MonthlyLoanEntry? = nil
     
-    init(loan: Loan, rows: [LoanAccountBalanceRow]) {
+    init(loan: Loan, rows: [LoanBalanceSheetRow]) {
         self.loan = loan
         self.rows = rows
     }
@@ -43,13 +43,14 @@ class LoanAccountBalance {
         guard let safeEntry = currentEntry else { return }
 
         rows.append(
-            LoanAccountBalanceRow(
+            LoanBalanceSheetRow(
                 date: safeEntry.date,
                 loanID: loan.id,
-                interestBalance: safeEntry.interestBalance,
+                loanName: loan.name,
                 principalBalance: safeEntry.principalBalance,
                 totalInterestPaid: safeEntry.totalInterestPaid,
-                paymentAmount: safeEntry.paymentAmount
+                paymentAmount: safeEntry.paymentAmount,
+                interestBalance: safeEntry.interestBalance
             )
         )
     }
@@ -74,16 +75,17 @@ class LoanAccountBalance {
         return lastEntry?.principalBalance ?? loan.startingBalance.amount
     }
     
-    private var lastEntry: LoanAccountBalanceRow? {
+    private var lastEntry: LoanBalanceSheetRow? {
         return rows.last
     }
 }
 
-struct LoanAccountBalanceRow {
-    let date: Date
-    let loanID: String
+public struct LoanBalanceSheetRow {
+    public let date: Date
+    public let loanID: String
+    public let loanName: String
+    public let principalBalance: Decimal
+    public let totalInterestPaid: Decimal
+    public let paymentAmount: Decimal
     let interestBalance: Decimal
-    let principalBalance: Decimal
-    let totalInterestPaid: Decimal
-    let paymentAmount: Decimal
 }

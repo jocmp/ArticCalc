@@ -17,6 +17,14 @@ extension Loan {
       return request
     }
     
+    static func findByName(name: String) -> NSFetchRequest<Loan> {
+        let request = Loan.fetchRequest()
+        request.predicate = NSPredicate(format: "name = %@", name)
+        request.sortDescriptors = []
+        request.fetchLimit = 1
+        return request
+    }
+    
     static func findAll() -> NSFetchRequest<Loan> {
       let request = Loan.fetchRequest()
       request.sortDescriptors = []

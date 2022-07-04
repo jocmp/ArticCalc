@@ -15,6 +15,7 @@ struct Error: Identifiable {
         case Presence
         case MoneyFormat
         case DoubleFormat
+        case Uniqueness
     }
 
     var id: String {
@@ -29,6 +30,8 @@ struct Error: Identifiable {
             return "Money"
         case .DoubleFormat:
             return "Double"
+        case .Uniqueness:
+            return "Uniqueness"
         }
     }
 }
