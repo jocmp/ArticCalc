@@ -13,6 +13,11 @@ class PresentedPaymentPlan: ObservableObject {
     private let loans: [Loan]
     private var paymentPlan: PaymentPlan
     let minimumPayment: Double
+    @Published var payoffStrategy: PayoffStrategy {
+        didSet {
+            calculate()
+        }
+    }
     @Published var monthlyPayment: Double {
         didSet {
             calculate()
@@ -27,17 +32,20 @@ class PresentedPaymentPlan: ObservableObject {
             .reduce(0, { $0 + $1.minimumPayment.amount })
             .toDouble()
         monthlyPayment = minimumPayment
+        payoffStrategy = .Avalanche
 
         paymentPlan = PaymentPlan.calculate(
             loans: arcticLoans,
-            monthlyPaymentAmount: Decimal(minimumPayment)
+            monthlyPaymentAmount: Decimal(minimumPayment),
+            strategy: .Avalanche
         )
     }
     
     func calculate() {
         paymentPlan = PaymentPlan.calculate(
             loans: loans.map { $0.asArcticLoan()},
-            monthlyPaymentAmount: Decimal(monthlyPayment)
+            monthlyPaymentAmount: Decimal(monthlyPayment),
+            strategy: payoffStrategy
         )
     }
     
@@ -69,6 +77,20 @@ extension LoanBalanceSheet: Identifiable, Comparable {
     
     public static func == (lhs: Arctic.LoanBalanceSheet, rhs: Arctic.LoanBalanceSheet) -> Bool {
         return lhs.name == rhs.name
+    }
+}
+
+extension LoanBalanceSheetRow: Identifiable, Comparable {
+    public static func < (lhs: Arctic.LoanBalanceSheetRow, rhs: Arctic.LoanBalanceSheetRow) -> Bool {
+        return lhs.date < rhs.date
+    }
+    
+    public static func == (lhs: LoanBalanceSheetRow, rhs: LoanBalanceSheetRow) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    public var id: Date {
+        return date
     }
 }
 

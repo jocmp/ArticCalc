@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Charts
+import Arctic
 
 struct PaymentPlanIndex: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -32,15 +33,26 @@ struct PaymentPlanTable: View {
             Text("Interest Paid: \(paymentPlan.interestPaid)")
             Text("Principal Paid: \(paymentPlan.principalPaid)")
         }.padding()
+        Picker("Strategy", selection: $paymentPlan.payoffStrategy) {
+            ForEach(PayoffStrategy.allStrategies, id: \.self) {
+                switch $0 {
+                case .Avalanche:
+                    Text("Avalance")
+                case .Snowball:
+                    Text("Snowball")
+                }
+             }
+         }
+         .pickerStyle(.segmented)
         Chart {
             ForEach(paymentPlan.monthlyBalanceSheets) { balanceSheet in
-                ForEach(balanceSheet.rows, id: \.date) { row in
+                ForEach(balanceSheet.rows) { row in
                     AreaMark(
                         x: .value("Day", row.date, unit: .month),
                         y: .value("Sales", row.principalBalance)
                     )
                 }
-                .foregroundStyle(by: .value("Loan Name", balanceSheet.name))                
+                .foregroundStyle(by: .value("Loan Name", balanceSheet.name))
             }
         }
     }

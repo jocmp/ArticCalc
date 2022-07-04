@@ -9,8 +9,15 @@ import Foundation
 
 
 public enum PayoffStrategy {
-    case Snowball
     case Avalanche
+    case Snowball
+    
+    public static var allStrategies: [PayoffStrategy] {
+        return [
+            .Avalanche,
+            .Snowball
+        ]
+    }
 }
 
 public struct PaymentPlan {
